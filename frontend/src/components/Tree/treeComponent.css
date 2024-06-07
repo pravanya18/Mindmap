@@ -1,0 +1,34 @@
+.node__root>g>rect {
+    fill: rgb(51, 102, 153); 
+    box-shadow: 10px 10px;
+
+}
+
+.node__branch>g>rect {
+    fill:  rgba(255, 166, 0, 0.632);
+    box-shadow: 10px 10px;
+}
+
+.node__leaf>g>rect {
+    fill: #ff4d0070;
+    box-shadow: 10px 10px;
+     stroke: black;
+    stroke-width: 2;
+}
+
+
+
+.rd3t-label>text {
+    /* font-style: normal; */
+    font-size: small;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; */
+    font-weight: lighter;
+
+    letter-spacing: 1px
+}
+
+feDropShadow{
+    background-color: black;
+    color: red;
+    flood-color: black;
+}

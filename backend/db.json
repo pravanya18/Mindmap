@@ -1,0 +1,692 @@
+{
+    "data": [
+        {
+            "id": "ceo",
+            "name": "CEO",
+            "children": [
+                {
+                    "name": "Manager",
+                    "attributes": {
+                        "Department": "Production",
+                        "isFullTime": true,
+                        "weeklyHours": 80
+                    },
+                    "children": [
+                        {
+                            "name": "Foreman",
+                            "attributes": {
+                                "Department": "Fabrication"
+                            },
+                            "children": [
+                                {
+                                    "name": "Workers"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Foreman",
+                            "attributes": {
+                                "Department": "Assembly"
+                            },
+                            "children": [
+                                {
+                                    "name": "Workers"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Manager",
+                    "attributes": {
+                        "Department": "Marketing",
+                        "isFullTime": true,
+                        "weeklyHours": 80
+                    },
+                    "children": [
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "A"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "B"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Manager",
+                    "attributes": {
+                        "Department": "Marketing",
+                        "isFullTime": true,
+                        "weeklyHours": 80
+                    },
+                    "children": [
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "A"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "B"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Manager",
+                    "attributes": {
+                        "Department": "Marketing",
+                        "isFullTime": true,
+                        "weeklyHours": 80
+                    },
+                    "children": [
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "A"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "B"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Manager",
+                    "attributes": {
+                        "Department": "Marketing",
+                        "isFullTime": true,
+                        "weeklyHours": 80
+                    },
+                    "children": [
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "A"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sales Officer",
+                            "attributes": {
+                                "Department": "B"
+                            },
+                            "children": [
+                                {
+                                    "name": "Salespeople"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sdlc",
+            "name": "sdlc",
+            "children": [
+                {
+                    "name": "Planning",
+                    "children": [
+                        {
+                            "name": "Requirement Analysis"
+                        },
+                        {
+                            "name": "Feasibility Study"
+                        },
+                        {
+                            "name": "Project Planning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Development",
+                    "children": [
+                        {
+                            "name": "Coding"
+                        },
+                        {
+                            "name": "Code Review"
+                        },
+                        {
+                            "name": "Unit Testing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Testing",
+                    "children": [
+                        {
+                            "name": "System Testing"
+                        },
+                        {
+                            "name": "Integration Testing"
+                        },
+                        {
+                            "name": "User Acceptance Testing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Deployment",
+                    "children": [
+                        {
+                            "name": "Deployment Planning"
+                        },
+                        {
+                            "name": "Release Management"
+                        },
+                        {
+                            "name": "User Training"
+                        }
+                    ]
+                },
+                {
+                    "name": "Maintenance",
+                    "children": [
+                        {
+                            "name": "Bug Fixing"
+                        },
+                        {
+                            "name": "Enhancements"
+                        },
+                        {
+                            "name": "Documentation Updates"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cloud",
+            "name": "cloud",
+            "children": [
+                {
+                    "name": "Cloud Computing Models",
+                    "children": [
+                        {
+                            "name": "Infrastructure as a Service (IaaS)"
+                        },
+                        {
+                            "name": "Platform as a Service (PaaS)"
+                        },
+                        {
+                            "name": "Software as a Service (SaaS)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cloud Service Models",
+                    "children": [
+                        {
+                            "name": "Public Cloud"
+                        },
+                        {
+                            "name": "Private Cloud"
+                        },
+                        {
+                            "name": "Hybrid Cloud"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cloud Deployment Models",
+                    "children": [
+                        {
+                            "name": "Amazon Web Services (AWS)"
+                        },
+                        {
+                            "name": "Microsoft Azure"
+                        },
+                        {
+                            "name": "Google Cloud Platform (GCP)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cloud Security",
+                    "children": [
+                        {
+                            "name": "Identity and Access Management (IAM)"
+                        },
+                        {
+                            "name": "Data Encryption"
+                        },
+                        {
+                            "name": "Security Groups"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cloud Services",
+                    "children": [
+                        {
+                            "name": "Storage Services"
+                        },
+                        {
+                            "name": "Compute Services"
+                        },
+                        {
+                            "name": "Database Services"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "how to become a pro in databases",
+            "name": "how to become a pro in databases",
+            "children": [
+              {
+                "name": "Understanding Database Fundamentals",
+                "children": [
+                  {
+                    "name": "Learn basic concepts of databases"
+                  },
+                  {
+                    "name": "Understand different types of databases",
+                    "children": [
+                      {"name": "Relational databases"},
+                      {"name": "NoSQL databases"},
+                      {"name": "NewSQL databases"}
+                    ]
+                  },
+                  {
+                    "name": "Grasp data modeling techniques"
+                  }
+                ]
+              },
+              {
+                "name": "Mastering SQL",
+                "children": [
+                  {
+                    "name": "Learn SQL syntax and commands"
+                  },
+                  {
+                    "name": "Practice writing complex SQL queries"
+                  },
+                  {
+                    "name": "Understand database manipulation and control"
+                  }
+                ]
+              },
+              {
+                "name": "Database Design and Optimization",
+                "children": [
+                  {
+                    "name": "Study normalization and denormalization"
+                  },
+                  {
+                    "name": "Learn indexing strategies"
+                  },
+                  {
+                    "name": "Optimize database performance"
+                  }
+                ]
+              },
+              {
+                "name": "Practical Experience and Projects",
+                "children": [
+                  {
+                    "name": "Work on real-world database projects"
+                  },
+                  {
+                    "name": "Participate in database-related competitions or challenges"
+                  },
+                  {
+                    "name": "Contribute to open-source database projects"
+                  }
+                ]
+              },
+              {
+                "name": "Continuous Learning and Keeping Up with Trends",
+                "children": [
+                  {
+                    "name": "Stay updated with latest database technologies and trends"
+                  },
+                  {
+                    "name": "Read books, articles, and research papers on databases"
+                  },
+                  {
+                    "name": "Join online communities and forums for database professionals"
+                  }
+                ]
+              }
+            ]
+        },
+        {
+            "id": "how to begin learning network security",
+            "name": "how to begin learning network security",
+            "children": [
+              {
+                "name": "Understanding Network Fundamentals",
+                "children": [
+                  {
+                    "name": "Learn basics of networking"
+                  },
+                  {
+                    "name": "Understand OSI model and TCP/IP protocol suite"
+                  },
+                  {
+                    "name": "Grasp concepts of IP addressing, subnetting, and routing"
+                  }
+                ]
+              },
+              {
+                "name": "Introduction to Security Concepts",
+                "children": [
+                  {
+                    "name": "Learn about common security threats and vulnerabilities"
+                  },
+                  {
+                    "name": "Understand the CIA triad (Confidentiality, Integrity, Availability)"
+                  },
+                  {
+                    "name": "Study principles of least privilege and defense-in-depth"
+                  }
+                ]
+              },
+              {
+                "name": "Fundamentals of Cryptography",
+                "children": [
+                  {
+                    "name": "Learn basic cryptographic techniques"
+                  },
+                  {
+                    "name": "Understand encryption algorithms and protocols"
+                  },
+                  {
+                    "name": "Study cryptographic key management"
+                  }
+                ]
+              },
+              {
+                "name": "Network Security Technologies",
+                "children": [
+                  {
+                    "name": "Firewalls and Intrusion Detection/Prevention Systems (IDS/IPS)"
+                  },
+                  {
+                    "name": "Virtual Private Networks (VPNs) and Secure Sockets Layer (SSL)"
+                  },
+                  {
+                    "name": "Wireless Security"
+                  }
+                ]
+              },
+              {
+                "name": "Practical Experience and Hands-On Practice",
+                "children": [
+                  {
+                    "name": "Set up a home lab for experimenting with network security tools"
+                  },
+                  {
+                    "name": "Participate in Capture the Flag (CTF) competitions"
+                  },
+                  {
+                    "name": "Work on real-world network security projects"
+                  }
+                ]
+              },
+              {
+                "name": "Continuous Learning and Keeping Up with Trends",
+                "children": [
+                  {
+                    "name": "Stay updated with latest security threats and countermeasures"
+                  },
+                  {
+                    "name": "Read books, articles, and security blogs"
+                  },
+                  {
+                    "name": "Join security communities and forums"
+                  }
+                ]
+              }
+            ]
+        },
+        {
+            "id": "how to become a certified react developer",
+            "name": "how to become a certified react developer",
+            "children": [
+              {
+                "name": "Learn the Basics of JavaScript",
+                "children": [
+                  { "name": "Variables, data types, and operators" },
+                  { "name": "Functions and scope" },
+                  { "name": "Arrays, objects, and loops" }
+                ]
+              },
+              {
+                "name": "Master React Fundamentals",
+                "children": [
+                  { "name": "Understanding JSX syntax" },
+                  { "name": "Components and props" },
+                  { "name": "State and lifecycle" }
+                ]
+              },
+              {
+                "name": "Explore Advanced React Concepts",
+                "children": [
+                  { "name": "React Hooks" },
+                  { "name": "Context API" },
+                  { "name": "Redux for state management" }
+                ]
+              },
+              {
+                "name": "Build Real-world Projects",
+                "children": [
+                  { "name": "Create single-page applications (SPAs)" },
+                  { "name": "Integrate React with backend technologies (e.g., Node.js, Express)" },
+                  { "name": "Work on open-source or personal projects" }
+                ]
+              },
+              {
+                "name": "Testing React Applications",
+                "children": [
+                  { "name": "Unit testing with Jest" },
+                  { "name": "End-to-end testing with Cypress or Selenium" },
+                  { "name": "Mocking and stubbing dependencies" }
+                ]
+              },
+              {
+                "name": "Learn Modern JavaScript Tooling",
+                "children": [
+                  { "name": "Webpack for bundling" },
+                  { "name": "Babel for transpiling" },
+                  { "name": "ESLint for code linting" }
+                ]
+              },
+              {
+                "name": "Continuous Learning and Improvement",
+                "children": [
+                  { "name": "Stay updated with React ecosystem and best practices" },
+                  { "name": "Participate in online communities and forums (e.g., Reactiflux, Stack Overflow)" },
+                  { "name": "Attend workshops, conferences, and meetups" }
+                ]
+              },
+              {
+                "name": "Preparation for Certification",
+                "children": [
+                  { "name": "Review official React documentation" },
+                  { "name": "Practice with sample exam questions" },
+                  { "name": "Take mock exams to assess readiness" }
+                ]
+              },
+              {
+                "name": "Obtain React Certification",
+                "children": [
+                  { "name": "Register and schedule exam with certification provider" },
+                  { "name": "Complete exam successfully" },
+                  { "name": "Stay certified by continuing education and recertification exams" }
+                ]
+              }
+            ]
+        },
+        {
+            "id": "efficient ways to product marketing",
+            "name": "efficient ways to product marketing",
+            "children": [
+              {
+                "name": "Market Research and Analysis",
+                "children": [
+                  {
+                    "name": "Identify target audience and market segments"
+                  },
+                  {
+                    "name": "Analyze competitors and their strategies"
+                  },
+                  {
+                    "name": "Understand market trends and customer needs"
+                  }
+                ]
+              },
+              {
+                "name": "Value Proposition and Positioning",
+                "children": [
+                  {
+                    "name": "Define unique selling points (USPs)"
+                  },
+                  {
+                    "name": "Craft compelling value proposition"
+                  },
+                  {
+                    "name": "Position product effectively in the market"
+                  }
+                ]
+              },
+              {
+                "name": "Content Marketing",
+                "children": [
+                  {
+                    "name": "Create high-quality content (blogs, articles, videos)"
+                  },
+                  {
+                    "name": "Optimize content for SEO"
+                  },
+                  {
+                    "name": "Leverage content for lead generation and brand awareness"
+                  }
+                ]
+              },
+              {
+                "name": "Digital Marketing Channels",
+                "children": [
+                  {
+                    "name": "Search Engine Marketing (SEM)"
+                  },
+                  {
+                    "name": "Social Media Marketing (SMM)"
+                  },
+                  {
+                    "name": "Email Marketing"
+                  },
+                  {
+                    "name": "Display Advertising"
+                  }
+                ]
+              },
+              {
+                "name": "Influencer Marketing",
+                "children": [
+                  {
+                    "name": "Identify relevant influencers in your niche"
+                  },
+                  {
+                    "name": "Build relationships with influencers"
+                  },
+                  {
+                    "name": "Collaborate with influencers for product promotion"
+                  }
+                ]
+              },
+              {
+                "name": "Customer Engagement and Retention",
+                "children": [
+                  {
+                    "name": "Provide excellent customer support"
+                  },
+                  {
+                    "name": "Offer loyalty programs and incentives"
+                  },
+                  {
+                    "name": "Solicit feedback and incorporate into product improvements"
+                  }
+                ]
+              },
+              {
+                "name": "Analytics and Optimization",
+                "children": [
+                  {
+                    "name": "Track and analyze marketing metrics (CTR, conversion rate, ROI)"
+                  },
+                  {
+                    "name": "Optimize campaigns based on performance data"
+                  },
+                  {
+                    "name": "Continuously refine marketing strategies"
+                  }
+                ]
+              },
+              {
+                "name": "Partnerships and Collaborations",
+                "children": [
+                  {
+                    "name": "Form strategic partnerships with complementary businesses"
+                  },
+                  {
+                    "name": "Joint marketing initiatives and co-branding"
+                  },
+                  {
+                    "name": "Cross-promotion with non-competing brands"
+                  }
+                ]
+              }
+            ]
+        }
+    ]
+}
