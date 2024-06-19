@@ -139,9 +139,9 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
                 type='text'
                 value={search}
                 onChange={handleSearchClick}
-                // onKeyDown={(e) => {
-                //     if (e.key === 'Enter') handleSearchSubmit()
-                // }}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') handleSearchSubmit()
+                }}
                 onClick={handleSearchSubmit}
             />
 
@@ -151,7 +151,9 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
             type='text'
             value={"SEARCH"}
             onClick={handleSearchSubmit}
-
+            onKeyDown={(e) => {
+                if (e.key === 'Enter') handleSearchSubmit()
+            }}
             />
             <Divider style={{"border-color": "black"}} />
         </Search>
