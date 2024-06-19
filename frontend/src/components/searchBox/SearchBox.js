@@ -89,7 +89,7 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
            })
             console.log(`${process.env.REACT_APP_server_url}data/${word}`);
             if (response) {
-                console.log(" response "+ response.data);
+                console.log(" response "+ JSON.stringify(response.data));
                 setTreeData(response.data)
             }
         } catch (e) {
