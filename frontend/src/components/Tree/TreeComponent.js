@@ -97,6 +97,12 @@ const TreeComponent = ({ treeData }) => {
                             </tspan>
                             
                             ))}
+                            
+                            {
+                                nodeDatum.articleLink ? (
+                                    <a href={nodeDatum.articleLink} target="_blank">  ...</a>
+                                ): <></>
+                            }
                         {/* {nodeDatum.attributes &&
                             Object.entries(nodeDatum.attributes).map(([labelKey, labelValue], i) => (
                                 <tspan key={`${labelKey}-${i}`}>

@@ -11,9 +11,9 @@
 
 .node__leaf>g>rect {
     fill: #ff4d0070;
-    box-shadow: 10px 10px;
-     stroke: black;
-    stroke-width: 2;
+    box-shadow: 30px 30px;
+     /* stroke: black;
+    stroke-width: 2; */
 }
 
 

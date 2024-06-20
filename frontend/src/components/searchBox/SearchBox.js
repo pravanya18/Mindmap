@@ -75,21 +75,42 @@ const StyledSearchButton = styled(InputBase)(({ theme }) => ({
 
 const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
 
+    // const [search, setSearch] = useState("")
+
+    // const fetchData = async (word) => {
+    //     setLoading(true)
+    //     try {
+    //         console.log("word12 "+word);
+    //       //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
+    //        const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, {keyword: word})
+    //        .then((response) => {console.log("responseeeeeee...." + JSON.stringify(response));
+    //        // JSON.stringify(response.data).replaceAll("title","name").replaceAll("subtopics","children")
+    //        setTreeData(response)}).catch(x => {
+    //         alert("alert "+ x);
+    //        })
+    //        console.log("Done... ")
+    //    //     console.log(`${process.env.REACT_APP_server_url}data/${word}`);
+    //         // if (response) {
+    //         //     console.log(" response "+ JSON.stringify(response.data));
+    //         //     setTreeData(response.data)
+    //         // }
+    //     } catch (e) {
+    //         if (e.response?.status === 404) {
+    //             setTreeData(null)
+    //         }
+
+    //         console.log(e)
+    //     }
+    //     setLoading(false)
+    // }
+
     const [search, setSearch] = useState("")
 
     const fetchData = async (word) => {
         setLoading(true)
         try {
-            console.log("word12 "+word);
-          //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
-           const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, {keyword: "Become A Pro Certified React Developer"})
-           .then((response) => {console.log("responseeeeeee...." + response);
-           setTreeData(response)}).catch(x => {
-            alert("alert "+ x);
-           })
-            console.log(`${process.env.REACT_APP_server_url}data/${word}`);
+            const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
             if (response) {
-                console.log(" response "+ JSON.stringify(response.data));
                 setTreeData(response.data)
             }
         } catch (e) {
@@ -101,25 +122,6 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
         }
         setLoading(false)
     }
-
-    // const [search, setSearch] = useState("cloud")
-
-    // const fetchData = async (word) => {
-    //     setLoading(true)
-    //     try {
-    //         const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
-    //         if (response) {
-    //             setTreeData(response.data)
-    //         }
-    //     } catch (e) {
-    //         if (e.response?.status === 404) {
-    //             setTreeData(null)
-    //         }
-
-    //         console.log(e)
-    //     }
-    //     setLoading(false)
-    // }
 
     const handleSearchClick = (e) => {
         setSearch(e.target.value)
