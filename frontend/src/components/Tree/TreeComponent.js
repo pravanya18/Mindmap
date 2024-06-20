@@ -94,15 +94,19 @@ const TreeComponent = ({ treeData }) => {
                         {nodeDatum.name.split(' ').map((word, index) => (
                           <tspan x="55px" dy={"1em"} key={index}>
                                 {word}
+                                {/* { index === nodeDatum.name.split(' ').length-1 ?  nodeDatum.articleLink ? (
+                                   <><tspan x="55px" dy={"1em"}></tspan><a href={nodeDatum.articleLink} target="_blank">  ...</a></> 
+                                ): <></> : ""} */}
                             </tspan>
                             
                             ))}
-                            
-                            {
+                           {
                                 nodeDatum.articleLink ? (
-                                    <a href={nodeDatum.articleLink} target="_blank">  ...</a>
+                                    <tspan x="55px" dy={"1.5em"}><a href={nodeDatum.articleLink} target="_blank">Link</a></tspan>
                                 ): <></>
                             }
+                            
+                           
                         {/* {nodeDatum.attributes &&
                             Object.entries(nodeDatum.attributes).map(([labelKey, labelValue], i) => (
                                 <tspan key={`${labelKey}-${i}`}>
@@ -111,6 +115,8 @@ const TreeComponent = ({ treeData }) => {
                             ))} */}
                     
                     </text>
+
+                    
 
 
                     {/* <ellipse cx="0" cy="0" rx={nodeDatum.name.length*10} ry="30" fill="blue" />

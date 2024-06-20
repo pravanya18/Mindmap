@@ -1,16 +1,17 @@
 .node__root>g>rect {
-    fill: rgb(51, 102, 153); 
+    /* fill: #3a5d95;  */
+    fill: #4c8087;
     box-shadow: 10px 10px;
 
 }
 
 .node__branch>g>rect {
-    fill:  rgba(255, 166, 0, 0.632);
+    fill:  #BC5897;
     box-shadow: 10px 10px;
 }
 
 .node__leaf>g>rect {
-    fill: #ff4d0070;
+    fill: #6a87ca;
     box-shadow: 30px 30px;
      /* stroke: black;
     stroke-width: 2; */
@@ -31,4 +32,16 @@ feDropShadow{
     background-color: black;
     color: red;
     flood-color: black;
+}
+
+.rd3t-node {
+    cursor: pointer;
+    fill: #777;
+    stroke: #000;
+    stroke-width: 1;
+}
+
+.text-class{
+    stroke: #000;
+    stroke-width: 1;
 }

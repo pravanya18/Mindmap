@@ -1,914 +1,913 @@
 {
-    "data": [
-        {
-            "id": "ceo",
-            "name": "CEO",
+  "data": [
+      {
+          "id": "ceo",
+          "name": "CEO",
+          "children": [
+              {
+                  "name": "Manager",
+                  "attributes": {
+                      "Department": "Production",
+                      "isFullTime": true,
+                      "weeklyHours": 80
+                  },
+                  "children": [
+                      {
+                          "name": "Foreman",
+                          "attributes": {
+                              "Department": "Fabrication"
+                          },
+                          "children": [
+                              {
+                                  "name": "Workers"
+                              }
+                          ]
+                      },
+                      {
+                          "name": "Foreman",
+                          "attributes": {
+                              "Department": "Assembly"
+                          },
+                          "children": [
+                              {
+                                  "name": "Workers"
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "name": "Manager",
+                  "attributes": {
+                      "Department": "Marketing",
+                      "isFullTime": true,
+                      "weeklyHours": 80
+                  },
+                  "children": [
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "A"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      },
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "B"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "name": "Manager",
+                  "attributes": {
+                      "Department": "Marketing",
+                      "isFullTime": true,
+                      "weeklyHours": 80
+                  },
+                  "children": [
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "A"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      },
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "B"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "name": "Manager",
+                  "attributes": {
+                      "Department": "Marketing",
+                      "isFullTime": true,
+                      "weeklyHours": 80
+                  },
+                  "children": [
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "A"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      },
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "B"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "name": "Manager",
+                  "attributes": {
+                      "Department": "Marketing",
+                      "isFullTime": true,
+                      "weeklyHours": 80
+                  },
+                  "children": [
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "A"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      },
+                      {
+                          "name": "Sales Officer",
+                          "attributes": {
+                              "Department": "B"
+                          },
+                          "children": [
+                              {
+                                  "name": "Salespeople"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "id": "sdlc",
+          "name": "sdlc",
+          "children": [
+              {
+                  "name": "Planning",
+                  "children": [
+                      {
+                          "name": "Requirement Analysis"
+                      },
+                      {
+                          "name": "Feasibility Study"
+                      },
+                      {
+                          "name": "Project Planning"
+                      }
+                  ]
+              },
+              {
+                  "name": "Development",
+                  "children": [
+                      {
+                          "name": "Coding"
+                      },
+                      {
+                          "name": "Code Review"
+                      },
+                      {
+                          "name": "Unit Testing"
+                      }
+                  ]
+              },
+              {
+                  "name": "Testing",
+                  "children": [
+                      {
+                          "name": "System Testing"
+                      },
+                      {
+                          "name": "Integration Testing"
+                      },
+                      {
+                          "name": "User Acceptance Testing"
+                      }
+                  ]
+              },
+              {
+                  "name": "Deployment",
+                  "children": [
+                      {
+                          "name": "Deployment Planning"
+                      },
+                      {
+                          "name": "Release Management"
+                      },
+                      {
+                          "name": "User Training"
+                      }
+                  ]
+              },
+              {
+                  "name": "Maintenance",
+                  "children": [
+                      {
+                          "name": "Bug Fixing"
+                      },
+                      {
+                          "name": "Enhancements"
+                      },
+                      {
+                          "name": "Documentation Updates"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "id": "cloud",
+          "name": "cloud",
+          "children": [
+              {
+                  "name": "Cloud Computing Models",
+                  "children": [
+                      {
+                          "name": "Infrastructure as a Service (IaaS)"
+                      },
+                      {
+                          "name": "Platform as a Service (PaaS)"
+                      },
+                      {
+                          "name": "Software as a Service (SaaS)"
+                      }
+                  ]
+              },
+              {
+                  "name": "Cloud Service Models",
+                  "children": [
+                      {
+                          "name": "Public Cloud"
+                      },
+                      {
+                          "name": "Private Cloud"
+                      },
+                      {
+                          "name": "Hybrid Cloud"
+                      }
+                  ]
+              },
+              {
+                  "name": "Cloud Deployment Models",
+                  "children": [
+                      {
+                          "name": "Amazon Web Services (AWS)"
+                      },
+                      {
+                          "name": "Microsoft Azure"
+                      },
+                      {
+                          "name": "Google Cloud Platform (GCP)"
+                      }
+                  ]
+              },
+              {
+                  "name": "Cloud Security",
+                  "children": [
+                      {
+                          "name": "Identity and Access Management (IAM)"
+                      },
+                      {
+                          "name": "Data Encryption"
+                      },
+                      {
+                          "name": "Security Groups"
+                      }
+                  ]
+              },
+              {
+                  "name": "Cloud Services",
+                  "children": [
+                      {
+                          "name": "Storage Services"
+                      },
+                      {
+                          "name": "Compute Services"
+                      },
+                      {
+                          "name": "Database Services"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "id": "how to become a pro in databases",
+            "name": "How to Become a Pro in Databases",
             "children": [
-                {
-                    "name": "Manager",
-                    "attributes": {
-                        "Department": "Production",
-                        "isFullTime": true,
-                        "weeklyHours": 80
-                    },
-                    "children": [
-                        {
-                            "name": "Foreman",
-                            "attributes": {
-                                "Department": "Fabrication"
-                            },
-                            "children": [
-                                {
-                                    "name": "Workers"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Foreman",
-                            "attributes": {
-                                "Department": "Assembly"
-                            },
-                            "children": [
-                                {
-                                    "name": "Workers"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Manager",
-                    "attributes": {
-                        "Department": "Marketing",
-                        "isFullTime": true,
-                        "weeklyHours": 80
-                    },
-                    "children": [
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "A"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "B"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Manager",
-                    "attributes": {
-                        "Department": "Marketing",
-                        "isFullTime": true,
-                        "weeklyHours": 80
-                    },
-                    "children": [
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "A"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "B"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Manager",
-                    "attributes": {
-                        "Department": "Marketing",
-                        "isFullTime": true,
-                        "weeklyHours": 80
-                    },
-                    "children": [
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "A"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "B"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Manager",
-                    "attributes": {
-                        "Department": "Marketing",
-                        "isFullTime": true,
-                        "weeklyHours": 80
-                    },
-                    "children": [
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "A"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Sales Officer",
-                            "attributes": {
-                                "Department": "B"
-                            },
-                            "children": [
-                                {
-                                    "name": "Salespeople"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "sdlc",
-            "name": "sdlc",
+            {
+            "name": "Introduction to Databases",
+            "description": "Understanding the basics of databases, types, and their importance.",
+            "articleLink": "https://www.geeksforgeeks.org/introduction-to-databases/"
+           
+            },
+            {
+            "name": "Database Design",
+            "description": "Learning the principles of designing a robust and efficient database.",
+            "articleLink": "https://www.tutorialspoint.com/dbms/dbms_data_model.htm",
             "children": [
-                {
-                    "name": "Planning",
-                    "children": [
-                        {
-                            "name": "Requirement Analysis"
-                        },
-                        {
-                            "name": "Feasibility Study"
-                        },
-                        {
-                            "name": "Project Planning"
-                        }
-                    ]
-                },
-                {
-                    "name": "Development",
-                    "children": [
-                        {
-                            "name": "Coding"
-                        },
-                        {
-                            "name": "Code Review"
-                        },
-                        {
-                            "name": "Unit Testing"
-                        }
-                    ]
-                },
-                {
-                    "name": "Testing",
-                    "children": [
-                        {
-                            "name": "System Testing"
-                        },
-                        {
-                            "name": "Integration Testing"
-                        },
-                        {
-                            "name": "User Acceptance Testing"
-                        }
-                    ]
-                },
-                {
-                    "name": "Deployment",
-                    "children": [
-                        {
-                            "name": "Deployment Planning"
-                        },
-                        {
-                            "name": "Release Management"
-                        },
-                        {
-                            "name": "User Training"
-                        }
-                    ]
-                },
-                {
-                    "name": "Maintenance",
-                    "children": [
-                        {
-                            "name": "Bug Fixing"
-                        },
-                        {
-                            "name": "Enhancements"
-                        },
-                        {
-                            "name": "Documentation Updates"
-                        }
-                    ]
-                }
+            {
+            "name": "Normalization",
+            "description": "Understanding the process of organizing data to reduce redundancy.",
+            "articleLink": "https://www.studytonight.com/dbms/database-normalization.php"
+           
+            },
+            {
+            "name": "Entity-Relationship Model",
+            "description": "Learning how to use ER diagrams to design databases.",
+            "articleLink": "https://www.lucidchart.com/pages/er-diagrams"
+           
+            },
+            {
+            "name": "Schema Design",
+            "description": "Designing the logical structure of the database.",
+            "articleLink": "https://www.geeksforgeeks.org/database-schema/"
+           
+            }
             ]
-        },
-        {
-            "id": "cloud",
-            "name": "cloud",
+            },
+            {
+            "name": "SQL Mastery",
+            "description": "Gaining proficiency in SQL, the language used to communicate with databases.",
+            "articleLink": "https://www.w3schools.com/sql/",
             "children": [
-                {
-                    "name": "Cloud Computing Models",
-                    "children": [
-                        {
-                            "name": "Infrastructure as a Service (IaaS)"
-                        },
-                        {
-                            "name": "Platform as a Service (PaaS)"
-                        },
-                        {
-                            "name": "Software as a Service (SaaS)"
-                        }
-                    ]
-                },
-                {
-                    "name": "Cloud Service Models",
-                    "children": [
-                        {
-                            "name": "Public Cloud"
-                        },
-                        {
-                            "name": "Private Cloud"
-                        },
-                        {
-                            "name": "Hybrid Cloud"
-                        }
-                    ]
-                },
-                {
-                    "name": "Cloud Deployment Models",
-                    "children": [
-                        {
-                            "name": "Amazon Web Services (AWS)"
-                        },
-                        {
-                            "name": "Microsoft Azure"
-                        },
-                        {
-                            "name": "Google Cloud Platform (GCP)"
-                        }
-                    ]
-                },
-                {
-                    "name": "Cloud Security",
-                    "children": [
-                        {
-                            "name": "Identity and Access Management (IAM)"
-                        },
-                        {
-                            "name": "Data Encryption"
-                        },
-                        {
-                            "name": "Security Groups"
-                        }
-                    ]
-                },
-                {
-                    "name": "Cloud Services",
-                    "children": [
-                        {
-                            "name": "Storage Services"
-                        },
-                        {
-                            "name": "Compute Services"
-                        },
-                        {
-                            "name": "Database Services"
-                        }
-                    ]
-                }
+            {
+            "name": "Basic Queries",
+            "description": "Learning to write simple SQL queries to retrieve data.",
+            "articleLink": "https://www.w3schools.com/sql/sql_select.asp"
+           
+            },
+            {
+            "name": "Joins",
+            "description": "Understanding how to combine data from multiple tables.",
+            "articleLink": "https://www.w3schools.com/sql/sql_join.asp"
+           
+            },
+            {
+            "name": "Subqueries",
+            "description": "Using queries within queries for complex data retrieval.",
+            "articleLink": "https://www.geeksforgeeks.org/sql-sub-queries/"
+           
+            },
+            {
+            "name": "Advanced SQL",
+            "description": "Exploring advanced SQL techniques and functions.",
+            "articleLink": "https://www.sqlshack.com/advanced-sql/"
+           
+            }
             ]
-        },
-        {
-            "id": "how to become a pro in databases",
-              "name": "How to Become a Pro in Databases",
-              "children": [
-              {
-              "name": "Introduction to Databases",
-              "description": "Understanding the basics of databases, types, and their importance.",
-              "articleLink": "https://www.geeksforgeeks.org/introduction-to-databases/",
-              "children": []
-              },
-              {
-              "name": "Database Design",
-              "description": "Learning the principles of designing a robust and efficient database.",
-              "articleLink": "https://www.tutorialspoint.com/dbms/dbms_data_model.htm",
-              "children": [
-              {
-              "name": "Normalization",
-              "description": "Understanding the process of organizing data to reduce redundancy.",
-              "articleLink": "https://www.studytonight.com/dbms/database-normalization.php",
-              "children": []
-              },
-              {
-              "name": "Entity-Relationship Model",
-              "description": "Learning how to use ER diagrams to design databases.",
-              "articleLink": "https://www.lucidchart.com/pages/er-diagrams",
-              "children": []
-              },
-              {
-              "name": "Schema Design",
-              "description": "Designing the logical structure of the database.",
-              "articleLink": "https://www.geeksforgeeks.org/database-schema/",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "SQL Mastery",
-              "description": "Gaining proficiency in SQL, the language used to communicate with databases.",
-              "articleLink": "https://www.w3schools.com/sql/",
-              "children": [
-              {
-              "name": "Basic Queries",
-              "description": "Learning to write simple SQL queries to retrieve data.",
-              "articleLink": "https://www.w3schools.com/sql/sql_select.asp",
-              "children": []
-              },
-              {
-              "name": "Joins",
-              "description": "Understanding how to combine data from multiple tables.",
-              "articleLink": "https://www.w3schools.com/sql/sql_join.asp",
-              "children": []
-              },
-              {
-              "name": "Subqueries",
-              "description": "Using queries within queries for complex data retrieval.",
-              "articleLink": "https://www.geeksforgeeks.org/sql-sub-queries/",
-              "children": []
-              },
-              {
-              "name": "Advanced SQL",
-              "description": "Exploring advanced SQL techniques and functions.",
-              "articleLink": "https://www.sqlshack.com/advanced-sql/",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Database Management Systems (DBMS)",
-              "description": "Understanding the software that interacts with end users, applications, and the database.",
-              "articleLink": "https://www.oracle.com/database/what-is-database-management-system/",
-              "children": [
-              {
-              "name": "Relational DBMS",
-              "description": "Exploring RDBMS like MySQL, PostgreSQL, and Oracle.",
-              "articleLink": "https://www.mysqltutorial.org/what-is-rdbms/",
-              "children": []
-              },
-              {
-              "name": "NoSQL DBMS",
-              "description": "Understanding non-relational databases like MongoDB and Cassandra.",
-              "articleLink": "https://www.mongodb.com/nosql-explained",
-              "children": []
-              },
-              {
-              "name": "NewSQL DBMS",
-              "description": "Learning about NewSQL databases that aim to meet the demands of modern applications.",
-              "articleLink": "https://www.enterprisedb.com/what-newsql",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Database Security",
-              "description": "Ensuring the protection of the database against threats and unauthorized access.",
-              "articleLink": "https://www.csoonline.com/article/3251714/what-is-database-security.html",
-              "children": [
-              {
-              "name": "Authentication and Authorization",
-              "description": "Managing user access and permissions.",
-              "articleLink": "https://www.sqlshack.com/authentication-authorization-and-encryption-in-sql-server/",
-              "children": []
-              },
-              {
-              "name": "Encryption",
-              "description": "Implementing encryption to protect sensitive data.",
-              "articleLink": "https://www.ibm.com/cloud/learn/data-encryption",
-              "children": []
-              },
-              {
-              "name": "Backup and Recovery",
-              "description": "Planning for data backup and disaster recovery.",
-              "articleLink": "https://www.veritas.com/protection/database-backup-and-recovery",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Performance Tuning",
-              "description": "Optimizing database performance for better efficiency.",
-              "articleLink": "https://www.oracle.com/database/what-is-performance-tuning/",
-              "children": [
-              {
-              "name": "Indexing",
-              "description": "Using indexes to speed up data retrieval.",
-              "articleLink": "https://www.datastax.com/guides/indexing",
-              "children": []
-              },
-              {
-              "name": "Query Optimization",
-              "description": "Writing efficient queries to improve performance.",
-              "articleLink": "https://www.sqlshack.com/sql-query-optimization/",
-              "children": []
-              },
-              {
-              "name": "Database Configuration",
-              "description": "Configuring database settings for optimal performance.",
-              "articleLink": "https://docs.microsoft.com/en-us/sql/relational-databases/performance-tuning",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Advanced Topics",
-              "description": "Delving into advanced database concepts and emerging trends.",
-              "articleLink": "https://www.coursera.org/specializations/advanced-database-systems",
-              "children": [
-              {
-              "name": "Big Data",
-              "description": "Understanding databases designed for handling large volumes of data.",
-              "articleLink": "https://www.ibm.com/analytics/hadoop/big-data-analytics",
-              "children": []
-              },
-              {
-              "name": "Data Warehousing",
-              "description": "Learning about systems used for reporting and data analysis.",
-              "articleLink": "https://www.oracle.com/data-warehouse/what-is-a-data-warehouse.html",
-              "children": []
-              },
-              {
-              "name": "Cloud Databases",
-              "description": "Exploring databases hosted on cloud platforms.",
-              "articleLink": "https://aws.amazon.com/what-is/cloud-database/",
-              "children": []
-              }
-              ]
-              }
-              ]
-              
-        },
-        {
-            "id": "how to begin learning network security",
-              "name": "how to begin learning network security",
-              "description": "Exploring various strategies and methods to market products effectively and efficiently.",
-              "children": [
-              {
-              "name": "Market Research",
-              "description": "Understanding the market, target audience, and competition.",
-              "articleLink": "https://www.marketing91.com/market-research/",
-              "children": [
-              {
-              "name": "Target Audience Analysis",
-              "description": "Identifying and understanding the needs, preferences, and behaviors of the target audience.",
-              "articleLink":
-              "https://www.forbes.com/sites/forbesagencycouncil/2022/03/23/how-to-identify-your-target-audience-in-five-easy-steps/",
-              "children": []
-              },
-              {
-              "name": "Competitive Analysis",
-              "description": "Analyzing competitors to identify their strengths, weaknesses, and strategies.",
-              "articleLink": "https://www.shopify.com/blog/competitive-analysis",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Product Positioning",
-              "description": "Creating a unique image and identity for the product in the market.",
-              "articleLink": "https://www.mindtools.com/a3lbmmh/product-positioning",
-              "children": [
-              {
-              "name": "Unique Selling Proposition (USP)",
-              "description": "Defining what makes the product unique and why customers should choose it over competitors.",
-              "articleLink": "https://www.wordstream.com/blog/ws/2016/04/20/unique-selling-proposition",
-              "children": []
-              },
-              {
-              "name": "Brand Messaging",
-              "description": "Crafting clear, consistent, and compelling messages that communicate the product's value.",
-              "articleLink": "https://blog.hubspot.com/marketing/brand-messaging",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Marketing Channels",
-              "description": "Selecting the most effective channels to reach potential customers.",
-              "articleLink": "https://www.smartinsights.com/digital-marketing-strategy/online-marketing-channels/",
-              "children": [
-              {
-              "name": "Digital Marketing",
-              "description": "Utilizing online platforms such as social media, email, and search engines to market products.",
-              "articleLink": "https://neilpatel.com/what-is-digital-marketing/",
-              "children": []
-              },
-              {
-              "name": "Traditional Marketing",
-              "description": "Using offline methods like print media, television, and radio for product promotion.",
-              "articleLink": "https://www.thebalancesmb.com/what-is-traditional-marketing-2295520",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Content Marketing",
-              "description": "Creating and distributing valuable content to attract and engage the target audience.",
-              "articleLink": "https://contentmarketinginstitute.com/what-is-content-marketing/",
-              "children": [
-              {
-              "name": "Blogging",
-              "description": "Writing articles and posts related to the product and industry to drive traffic and engagement.",
-              "articleLink": "https://www.shopify.com/blog/content-marketing",
-              "children": []
-              },
-              {
-              "name": "Video Marketing",
-              "description": "Using videos to demonstrate product features, share customer testimonials, and engage the audience.",
-              "articleLink": "https://www.hubspot.com/video-marketing",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Sales Strategies",
-              "description": "Developing techniques to convert leads into customers.",
-              "articleLink": "https://blog.hubspot.com/sales/sales-strategy",
-              "children": [
-              {
-              "name": "Sales Funnels",
-              "description": "Mapping out the customer journey from awareness to purchase.",
-              "articleLink": "https://www.salesforce.com/resources/articles/sales-funnel/",
-              "children": []
-              },
-              {
-              "name": "Lead Generation",
-              "description": "Attracting and capturing potential customers’ interest in the product.",
-              "articleLink": "https://www.hubspot.com/lead-generation",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Performance Measurement",
-              "description": "Tracking and analyzing the effectiveness of marketing efforts.",
-              "articleLink": "https://www.marketingevolution.com/knowledge-center/marketing-performance-measurement",
-              "children": [
-              {
-              "name": "Key Performance Indicators (KPIs)",
-              "description": "Metrics used to assess the success of marketing activities.",
-              "articleLink": "https://www.klipfolio.com/resources/articles/marketing-kpis-examples",
-              "children": []
-              },
-              {
-              "name": "Return on Investment (ROI)",
-              "description": "Calculating the financial return generated from marketing investments.",
-              "articleLink":
-              "https://www.forbes.com/sites/forbesagencycouncil/2021/04/23/eight-ways-to-measure-the-return-on-investment-of-your-marketing/",
-              "children": []
-              }
-              ]
-              }
-              ]
-              
-        },
-        {
-            "id": "how to become a certified react developer",
+            },
+            {
+            "name": "Database Management Systems (DBMS)",
+            "description": "Understanding the software that interacts with end users, applications, and the database.",
+            "articleLink": "https://www.oracle.com/database/what-is-database-management-system/",
+            "children": [
+            {
+            "name": "Relational DBMS",
+            "description": "Exploring RDBMS like MySQL, PostgreSQL, and Oracle.",
+            "articleLink": "https://www.mysqltutorial.org/what-is-rdbms/"
+           
+            },
+            {
+            "name": "NoSQL DBMS",
+            "description": "Understanding non-relational databases like MongoDB and Cassandra.",
+            "articleLink": "https://www.mongodb.com/nosql-explained"
+           
+            },
+            {
+            "name": "NewSQL DBMS",
+            "description": "Learning about NewSQL databases that aim to meet the demands of modern applications.",
+            "articleLink": "https://www.enterprisedb.com/what-newsql"
+           
+            }
+            ]
+            },
+            {
+            "name": "Database Security",
+            "description": "Ensuring the protection of the database against threats and unauthorized access.",
+            "articleLink": "https://www.csoonline.com/article/3251714/what-is-database-security.html",
+            "children": [
+            {
+            "name": "Authentication and Authorization",
+            "description": "Managing user access and permissions.",
+            "articleLink": "https://www.sqlshack.com/authentication-authorization-and-encryption-in-sql-server/"
+         
+            },
+            {
+            "name": "Encryption",
+            "description": "Implementing encryption to protect sensitive data.",
+            "articleLink": "https://www.ibm.com/cloud/learn/data-encryption"
+           
+            },
+            {
+            "name": "Backup and Recovery",
+            "description": "Planning for data backup and disaster recovery.",
+            "articleLink": "https://www.veritas.com/protection/database-backup-and-recovery"
+        
+            }
+            ]
+            },
+            {
+            "name": "Performance Tuning",
+            "description": "Optimizing database performance for better efficiency.",
+            "articleLink": "https://www.oracle.com/database/what-is-performance-tuning/",
+            "children": [
+            {
+            "name": "Indexing",
+            "description": "Using indexes to speed up data retrieval.",
+            "articleLink": "https://www.datastax.com/guides/indexing"
+         
+            },
+            {
+            "name": "Query Optimization",
+            "description": "Writing efficient queries to improve performance.",
+            "articleLink": "https://www.sqlshack.com/sql-query-optimization/"
+           
+            },
+            {
+            "name": "Database Configuration",
+            "description": "Configuring database settings for optimal performance.",
+            "articleLink": "https://docs.microsoft.com/en-us/sql/relational-databases/performance-tuning"
+           
+            }
+            ]
+            },
+            {
+            "name": "Advanced Topics",
+            "description": "Delving into advanced database concepts and emerging trends.",
+            "articleLink": "https://www.coursera.org/specializations/advanced-database-systems",
+            "children": [
+            {
+            "name": "Big Data",
+            "description": "Understanding databases designed for handling large volumes of data.",
+            "articleLink": "https://www.ibm.com/analytics/hadoop/big-data-analytics"
+           
+            },
+            {
+            "name": "Data Warehousing",
+            "description": "Learning about systems used for reporting and data analysis.",
+            "articleLink": "https://www.oracle.com/data-warehouse/what-is-a-data-warehouse.html"
+           
+            },
+            {
+            "name": "Cloud Databases",
+            "description": "Exploring databases hosted on cloud platforms.",
+            "articleLink": "https://aws.amazon.com/what-is/cloud-database/"
+           
+            }
+            ]
+            }
+            ]
             
-              "name": "how to become a certified react developer",
-              "description": "A comprehensive guide to becoming a certified professional in React development.",
-              "children": [
-              {
-              "name": "Introduction to React",
-              "description": "Learn the fundamentals of React, including its history, core concepts, and why it's popular.",
-              "articleLink": "https://reactjs.org/docs/getting-started.html"
-             
-              },
-              {
-              "name": "Setting Up the Development Environment",
-              "description": "Instructions on setting up the development environment for React, including Node.js, npm, and popular IDEs.",
-              "articleLink": "https://reactjs.org/docs/create-a-new-react-app.html",
-              "children": [
-              {
-              "name": "Installing Node.js and npm",
-              "description": "Guide to installing Node.js and npm, essential tools for React development.",
-              "articleLink": "https://nodejs.org/en/download/",
-              "children": []
-              },
-              {
-              "name": "Using Create React App",
-              "description": "Learn how to bootstrap a new React project using Create React App.",
-              "articleLink": "https://reactjs.org/docs/create-a-new-react-app.html#create-react-app",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Core Concepts",
-              "description": "Deep dive into the core concepts of React, including JSX, components, state, and props.",
-              "articleLink": "https://reactjs.org/docs/hello-world.html",
-              "children": [
-              {
-              "name": "JSX",
-              "description": "Understanding JSX and how it is used in React.",
-              "articleLink": "https://reactjs.org/docs/introducing-jsx.html",
-              "children": []
-              },
-              {
-              "name": "Components",
-              "description": "Learn about functional and class components in React.",
-              "articleLink": "https://reactjs.org/docs/components-and-props.html",
-              "children": []
-              },
-              {
-              "name": "State and Lifecycle",
-              "description": "Understanding state management and component lifecycle in React.",
-              "articleLink": "https://reactjs.org/docs/state-and-lifecycle.html",
-              "children": []
-              },
-              {
-              "name": "Props",
-              "description": "Learn how to use props to pass data between components.",
-              "articleLink": "https://reactjs.org/docs/components-and-props.html",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Advanced Concepts",
-              "description": "Explore advanced React concepts like hooks, context API, and higher-order components.",
-              "articleLink": "https://reactjs.org/docs/hooks-intro.html",
-              "children": [
-              {
-              "name": "Hooks",
-              "description": "Introduction to React Hooks and how to use them.",
-              "articleLink": "https://reactjs.org/docs/hooks-overview.html",
-              "children": []
-              },
-              {
-              "name": "Context API",
-              "description": "Learn how to manage global state with the Context API.",
-              "articleLink": "https://reactjs.org/docs/context.html",
-              "children": []
-              },
-              {
-              "name": "Higher-Order Components",
-              "description": "Understand higher-order components (HOCs) and their use cases.",
-              "articleLink": "https://reactjs.org/docs/higher-order-components.html",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "React Ecosystem",
-              "description": "Overview of the React ecosystem including popular libraries like React Router, Redux, and Material-UI.",
-              "articleLink": "https://reactjs.org/community/libraries.html",
-              "children": [
-              {
-              "name": "React Router",
-              "description": "Introduction to React Router for handling navigation in React applications.",
-              "articleLink": "https://reactrouter.com/",
-              "children": []
-              },
-              {
-              "name": "Redux",
-              "description": "Learn about Redux for state management in larger React applications.",
-              "articleLink": "https://redux.js.org/",
-              "children": []
-              },
-              {
-              "name": "Material-UI",
-              "description": "Exploring Material-UI for implementing Material Design components in React.",
-              "articleLink": "https://material-ui.com/",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Testing in React",
-              "description": "Learn about testing strategies and tools for React applications, including Jest and React Testing Library.",
-              "articleLink": "https://reactjs.org/docs/testing.html",
-              "children": [
-              {
-              "name": "Jest",
-              "description": "Introduction to Jest, a JavaScript testing framework.",
-              "articleLink": "https://jestjs.io/",
-              "children": []
-              },
-              {
-              "name": "React Testing Library",
-              "description": "Learn how to use React Testing Library to test React components.",
-              "articleLink": "https://testing-library.com/docs/react-testing-library/intro/",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Deployment",
-              "description": "Guide on deploying React applications to various platforms like Vercel, Netlify, and GitHub Pages.",
-              "articleLink": "https://create-react-app.dev/docs/deployment/",
-              "children": [
-              {
-              "name": "Vercel",
-              "description": "Deploying React applications using Vercel.",
-              "articleLink": "https://vercel.com/docs",
-              "children": []
-              },
-              {
-              "name": "Netlify",
-              "description": "Deploying React applications using Netlify.",
-              "articleLink": "https://docs.netlify.com/",
-              "children": []
-              },
-              {
-              "name": "GitHub Pages",
-              "description": "Deploying React applications using GitHub Pages.",
-              "articleLink": "https://create-react-app.dev/docs/deployment/#github-pages",
-              "children": []
-              }
-              ]
-              },
-              {
-              "name": "Certification and Career Advancement",
-              "description": "Information on React certification programs and tips for advancing your career as a React developer.",
-              "articleLink": "https://www.udemy.com/course/react-certification/",
-              "children": [
-              {
-              "name": "Certification Programs",
-              "description": "Overview of popular React certification programs.",
-              "articleLink": "https://www.udacity.com/course/react-nanodegree--nd019",
-              "children": []
-              },
-              {
-              "name": "Job Market and Opportunities",
-              "description": "Exploring job opportunities and career paths for React developers.",
-              "articleLink": "https://www.articleLinkedin.com/jobs/react-developer-jobs/",
-              "children": []
-              }
-              ]
-              }
-              ]
-              
-        },
-        {
-            "id": "efficient ways to product marketing",
-            "name": "efficient ways to product marketing",
+      },
+      {
+          "id": "how to begin learning network security",
+            "name": "how to begin learning network security",
+            "description": "Exploring various strategies and methods to market products effectively and efficiently.",
             "children": [
-              {
-                "name": "Market Research and Analysis",
-                "children": [
-                  {
-                    "name": "Identify target audience and market segments"
-                  },
-                  {
-                    "name": "Analyze competitors and their strategies"
-                  },
-                  {
-                    "name": "Understand market trends and customer needs"
-                  }
-                ]
-              },
-              {
-                "name": "Value Proposition and Positioning",
-                "children": [
-                  {
-                    "name": "Define unique selling points (USPs)"
-                  },
-                  {
-                    "name": "Craft compelling value proposition"
-                  },
-                  {
-                    "name": "Position product effectively in the market"
-                  }
-                ]
-              },
-              {
-                "name": "Content Marketing",
-                "children": [
-                  {
-                    "name": "Create high-quality content (blogs, articles, videos)"
-                  },
-                  {
-                    "name": "Optimize content for SEO"
-                  },
-                  {
-                    "name": "Leverage content for lead generation and brand awareness"
-                  }
-                ]
-              },
-              {
-                "name": "Digital Marketing Channels",
-                "children": [
-                  {
-                    "name": "Search Engine Marketing (SEM)"
-                  },
-                  {
-                    "name": "Social Media Marketing (SMM)"
-                  },
-                  {
-                    "name": "Email Marketing"
-                  },
-                  {
-                    "name": "Display Advertising"
-                  }
-                ]
-              },
-              {
-                "name": "Influencer Marketing",
-                "children": [
-                  {
-                    "name": "Identify relevant influencers in your niche"
-                  },
-                  {
-                    "name": "Build relationships with influencers"
-                  },
-                  {
-                    "name": "Collaborate with influencers for product promotion"
-                  }
-                ]
-              },
-              {
-                "name": "Customer Engagement and Retention",
-                "children": [
-                  {
-                    "name": "Provide excellent customer support"
-                  },
-                  {
-                    "name": "Offer loyalty programs and incentives"
-                  },
-                  {
-                    "name": "Solicit feedback and incorporate into product improvements"
-                  }
-                ]
-              },
-              {
-                "name": "Analytics and Optimization",
-                "children": [
-                  {
-                    "name": "Track and analyze marketing metrics (CTR, conversion rate, ROI)"
-                  },
-                  {
-                    "name": "Optimize campaigns based on performance data"
-                  },
-                  {
-                    "name": "Continuously refine marketing strategies"
-                  }
-                ]
-              },
-              {
-                "name": "Partnerships and Collaborations",
-                "children": [
-                  {
-                    "name": "Form strategic partnerships with complementary businesses"
-                  },
-                  {
-                    "name": "Joint marketing initiatives and co-branding"
-                  },
-                  {
-                    "name": "Cross-promotion with non-competing brands"
-                  }
-                ]
-              }
+            {
+            "name": "Market Research",
+            "description": "Understanding the market, target audience, and competition.",
+            "articleLink": "https://www.marketing91.com/market-research/",
+            "children": [
+            {
+            "name": "Target Audience Analysis",
+            "description": "Identifying and understanding the needs, preferences, and behaviors of the target audience.",
+            "articleLink":
+            "https://www.forbes.com/sites/forbesagencycouncil/2022/03/23/how-to-identify-your-target-audience-in-five-easy-steps/"
+           
+            },
+            {
+            "name": "Competitive Analysis",
+            "description": "Analyzing competitors to identify their strengths, weaknesses, and strategies.",
+            "articleLink": "https://www.shopify.com/blog/competitive-analysis"
+           
+            }
             ]
-        }
-    ]
+            },
+            {
+            "name": "Product Positioning",
+            "description": "Creating a unique image and identity for the product in the market.",
+            "articleLink": "https://www.mindtools.com/a3lbmmh/product-positioning",
+            "children": [
+            {
+            "name": "Unique Selling Proposition (USP)",
+            "description": "Defining what makes the product unique and why customers should choose it over competitors.",
+            "articleLink": "https://www.wordstream.com/blog/ws/2016/04/20/unique-selling-proposition"
+           
+            },
+            {
+            "name": "Brand Messaging",
+            "description": "Crafting clear, consistent, and compelling messages that communicate the product's value.",
+            "articleLink": "https://blog.hubspot.com/marketing/brand-messaging"
+           
+            }
+            ]
+            },
+            {
+            "name": "Marketing Channels",
+            "description": "Selecting the most effective channels to reach potential customers.",
+            "articleLink": "https://www.smartinsights.com/digital-marketing-strategy/online-marketing-channels/",
+            "children": [
+            {
+            "name": "Digital Marketing",
+            "description": "Utilizing online platforms such as social media, email, and search engines to market products.",
+            "articleLink": "https://neilpatel.com/what-is-digital-marketing/"
+           
+            },
+            {
+            "name": "Traditional Marketing",
+            "description": "Using offline methods like print media, television, and radio for product promotion.",
+            "articleLink": "https://www.thebalancesmb.com/what-is-traditional-marketing-2295520"
+           
+            }
+            ]
+            },
+            {
+            "name": "Content Marketing",
+            "description": "Creating and distributing valuable content to attract and engage the target audience.",
+            "articleLink": "https://contentmarketinginstitute.com/what-is-content-marketing/",
+            "children": [
+            {
+            "name": "Blogging",
+            "description": "Writing articles and posts related to the product and industry to drive traffic and engagement.",
+            "articleLink": "https://www.shopify.com/blog/content-marketing"
+           
+            },
+            {
+            "name": "Video Marketing",
+            "description": "Using videos to demonstrate product features, share customer testimonials, and engage the audience.",
+            "articleLink": "https://www.hubspot.com/video-marketing"
+           
+            }
+            ]
+            },
+            {
+            "name": "Sales Strategies",
+            "description": "Developing techniques to convert leads into customers.",
+            "articleLink": "https://blog.hubspot.com/sales/sales-strategy",
+            "children": [
+            {
+            "name": "Sales Funnels",
+            "description": "Mapping out the customer journey from awareness to purchase.",
+            "articleLink": "https://www.salesforce.com/resources/articles/sales-funnel/"
+           
+            },
+            {
+            "name": "Lead Generation",
+            "description": "Attracting and capturing potential customers’ interest in the product.",
+            "articleLink": "https://www.hubspot.com/lead-generation"
+           
+            }
+            ]
+            },
+            {
+            "name": "Performance Measurement",
+            "description": "Tracking and analyzing the effectiveness of marketing efforts.",
+            "articleLink": "https://www.marketingevolution.com/knowledge-center/marketing-performance-measurement",
+            "children": [
+            {
+            "name": "Key Performance Indicators (KPIs)",
+            "description": "Metrics used to assess the success of marketing activities.",
+            "articleLink": "https://www.klipfolio.com/resources/articles/marketing-kpis-examples"
+           
+            },
+            {
+            "name": "Return on Investment (ROI)",
+            "description": "Calculating the financial return generated from marketing investments.",
+            "articleLink":
+            "https://www.forbes.com/sites/forbesagencycouncil/2021/04/23/eight-ways-to-measure-the-return-on-investment-of-your-marketing/"
+           
+            }
+            ]
+            }
+            ]
+            
+      },
+      {
+          "id": "how to become a certified react developer",
+          
+            "name": "how to become a certified react developer",
+            "description": "A comprehensive guide to becoming a certified professional in React development.",
+            "children": [
+            {
+            "name": "Introduction to React",
+            "description": "Learn the fundamentals of React, including its history, core concepts, and why it's popular.",
+            "articleLink": "https://reactjs.org/docs/getting-started.html"
+           
+            },
+            {
+            "name": "Setting Up the Development Environment",
+            "description": "Instructions on setting up the development environment for React, including Node.js, npm, and popular IDEs.",
+            "articleLink": "https://reactjs.org/docs/create-a-new-react-app.html",
+            "children": [
+            {
+            "name": "Installing Node.js and npm",
+            "description": "Guide to installing Node.js and npm, essential tools for React development.",
+            "articleLink": "https://nodejs.org/en/download/"
+           
+            },
+            {
+            "name": "Using Create React App",
+            "description": "Learn how to bootstrap a new React project using Create React App.",
+            "articleLink": "https://reactjs.org/docs/create-a-new-react-app.html#create-react-app"
+           
+            }
+            ]
+            },
+            {
+            "name": "Core Concepts",
+            "description": "Deep dive into the core concepts of React, including JSX, components, state, and props.",
+            "articleLink": "https://reactjs.org/docs/hello-world.html",
+            "children": [
+            {
+            "name": "JSX",
+            "description": "Understanding JSX and how it is used in React.",
+            "articleLink": "https://reactjs.org/docs/introducing-jsx.html"
+           
+            },
+            {
+            "name": "Components",
+            "description": "Learn about functional and class components in React.",
+            "articleLink": "https://reactjs.org/docs/components-and-props.html"
+           
+            },
+            {
+            "name": "State and Lifecycle",
+            "description": "Understanding state management and component lifecycle in React.",
+            "articleLink": "https://reactjs.org/docs/state-and-lifecycle.html"
+           
+            },
+            {
+            "name": "Props",
+            "description": "Learn how to use props to pass data between components.",
+            "articleLink": "https://reactjs.org/docs/components-and-props.html"
+           
+            }
+            ]
+            },
+            {
+            "name": "Advanced Concepts",
+            "description": "Explore advanced React concepts like hooks, context API, and higher-order components.",
+            "articleLink": "https://reactjs.org/docs/hooks-intro.html",
+            "children": [
+            {
+            "name": "Hooks",
+            "description": "Introduction to React Hooks and how to use them.",
+            "articleLink": "https://reactjs.org/docs/hooks-overview.html"
+           
+            },
+            {
+            "name": "Context API",
+            "description": "Learn how to manage global state with the Context API.",
+            "articleLink": "https://reactjs.org/docs/context.html"
+           
+            },
+            {
+            "name": "Higher-Order Components",
+            "description": "Understand higher-order components (HOCs) and their use cases.",
+            "articleLink": "https://reactjs.org/docs/higher-order-components.html"
+           
+            }
+            ]
+            },
+            {
+            "name": "React Ecosystem",
+            "description": "Overview of the React ecosystem including popular libraries like React Router, Redux, and Material-UI.",
+            "articleLink": "https://reactjs.org/community/libraries.html",
+            "children": [
+            {
+            "name": "React Router",
+            "description": "Introduction to React Router for handling navigation in React applications.",
+            "articleLink": "https://reactrouter.com/"
+           
+            },
+            {
+            "name": "Redux",
+            "description": "Learn about Redux for state management in larger React applications.",
+            "articleLink": "https://redux.js.org/"
+           
+            },
+            {
+            "name": "Material-UI",
+            "description": "Exploring Material-UI for implementing Material Design components in React.",
+            "articleLink": "https://material-ui.com/"
+           
+            }
+            ]
+            },
+            {
+            "name": "Testing in React",
+            "description": "Learn about testing strategies and tools for React applications, including Jest and React Testing Library.",
+            "articleLink": "https://reactjs.org/docs/testing.html",
+            "children": [
+            {
+            "name": "Jest",
+            "description": "Introduction to Jest, a JavaScript testing framework.",
+            "articleLink": "https://jestjs.io/"
+           
+            },
+            {
+            "name": "React Testing Library",
+            "description": "Learn how to use React Testing Library to test React components.",
+            "articleLink": "https://testing-library.com/docs/react-testing-library/intro/"
+           
+            }
+            ]
+            },
+            {
+            "name": "Deployment",
+            "description": "Guide on deploying React applications to various platforms like Vercel, Netlify, and GitHub Pages.",
+            "articleLink": "https://create-react-app.dev/docs/deployment/",
+            "children": [
+            {
+            "name": "Vercel",
+            "description": "Deploying React applications using Vercel.",
+            "articleLink": "https://vercel.com/docs"
+           
+            },
+            {
+            "name": "Netlify",
+            "description": "Deploying React applications using Netlify.",
+            "articleLink": "https://docs.netlify.com/"
+           
+            },
+            {
+            "name": "GitHub Pages",
+            "description": "Deploying React applications using GitHub Pages.",
+            "articleLink": "https://create-react-app.dev/docs/deployment/#github-pages"
+           
+            }
+            ]
+            },
+            {
+            "name": "Certification and Career Advancement",
+            "description": "Information on React certification programs and tips for advancing your career as a React developer.",
+            "articleLink": "https://www.udemy.com/course/react-certification/",
+            "children": [
+            {
+            "name": "Certification Programs",
+            "description": "Overview of popular React certification programs.",
+            "articleLink": "https://www.udacity.com/course/react-nanodegree--nd019"
+           
+            },
+            {
+            "name": "Job Market and Opportunities",
+            "description": "Exploring job opportunities and career paths for React developers.",
+            "articleLink": "https://www.articleLinkedin.com/jobs/react-developer-jobs/"
+            }
+            ]
+            }
+            ]
+            
+      },
+      {
+          "id": "efficient ways to product marketing",
+          "name": "efficient ways to product marketing",
+          "children": [
+            {
+              "name": "Market Research and Analysis",
+              "children": [
+                {
+                  "name": "Identify target audience and market segments"
+                },
+                {
+                  "name": "Analyze competitors and their strategies"
+                },
+                {
+                  "name": "Understand market trends and customer needs"
+                }
+              ]
+            },
+            {
+              "name": "Value Proposition and Positioning",
+              "children": [
+                {
+                  "name": "Define unique selling points (USPs)"
+                },
+                {
+                  "name": "Craft compelling value proposition"
+                },
+                {
+                  "name": "Position product effectively in the market"
+                }
+              ]
+            },
+            {
+              "name": "Content Marketing",
+              "children": [
+                {
+                  "name": "Create high-quality content (blogs, articles, videos)"
+                },
+                {
+                  "name": "Optimize content for SEO"
+                },
+                {
+                  "name": "Leverage content for lead generation and brand awareness"
+                }
+              ]
+            },
+            {
+              "name": "Digital Marketing Channels",
+              "children": [
+                {
+                  "name": "Search Engine Marketing (SEM)"
+                },
+                {
+                  "name": "Social Media Marketing (SMM)"
+                },
+                {
+                  "name": "Email Marketing"
+                },
+                {
+                  "name": "Display Advertising"
+                }
+              ]
+            },
+            {
+              "name": "Influencer Marketing",
+              "children": [
+                {
+                  "name": "Identify relevant influencers in your niche"
+                },
+                {
+                  "name": "Build relationships with influencers"
+                },
+                {
+                  "name": "Collaborate with influencers for product promotion"
+                }
+              ]
+            },
+            {
+              "name": "Customer Engagement and Retention",
+              "children": [
+                {
+                  "name": "Provide excellent customer support"
+                },
+                {
+                  "name": "Offer loyalty programs and incentives"
+                },
+                {
+                  "name": "Solicit feedback and incorporate into product improvements"
+                }
+              ]
+            },
+            {
+              "name": "Analytics and Optimization",
+              "children": [
+                {
+                  "name": "Track and analyze marketing metrics (CTR, conversion rate, ROI)"
+                },
+                {
+                  "name": "Optimize campaigns based on performance data"
+                },
+                {
+                  "name": "Continuously refine marketing strategies"
+                }
+              ]
+            },
+            {
+              "name": "Partnerships and Collaborations",
+              "children": [
+                {
+                  "name": "Form strategic partnerships with complementary businesses"
+                },
+                {
+                  "name": "Joint marketing initiatives and co-branding"
+                },
+                {
+                  "name": "Cross-promotion with non-competing brands"
+                }
+              ]
+            }
+          ]
+      }
+  ]
 }
