@@ -169,7 +169,7 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
     return (
         <Search>
             <StyledInputBase
-                placeholder="enter a topic to generate a mindmap for"
+                placeholder="enter a topic to generate a mindmap "
                 inputProps={{ 'aria-label': 'search' }}
                 type='text'
                 value={search}

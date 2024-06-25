@@ -19,7 +19,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
               borderRadius: "2px"
         }}>
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                <img src="http://thewowstyle.com/wp-content/uploads/2015/01/nature-images-6.jpg" style={{"width":"40px", "height":"40px", "marginTop": "10px", }}></img>
+                <img src="../images/MindmapLogo.jpeg" alt="HTML Tutorial" style={{"width":"40px", "height":"40px", "marginTop": "10px", }}></img>
                 <Typography variant='h5' color="black" sx={{alignItems: {xs:'center', md:'left'}, textAlign:{xs:'center'}, marginTop: {xs:'10px', md:'10px'}, marginLeft:"30px", fontWeight: "bold" }}>
                     MindBloom
                 </Typography>
