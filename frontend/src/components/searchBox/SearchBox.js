@@ -174,9 +174,9 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
                 type='text'
                 value={search}
                 onChange={handleSearchClick}
-                // onKeyDown={(e) => {
-                //     if (e.key === 'Enter') handleSearchSubmit()
-                // }}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') handleSearchSubmit()
+                }}
                 // onClick={handleSearchSubmit}
             />
 
