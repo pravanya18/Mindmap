@@ -14,7 +14,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
             //  gap:'2px',
             alignItems: {md:'center'},
             width:'100%',
-            height: {xs: '28vh', sm: '22vh', md: '10vh', lg: '10vh', xl: '10vh'},
+            height: {xs: '22vh', sm: '22vh', md: '10vh', lg: '10vh', xl: '10vh'},
             zIndex: 500, background: '#b3b3f4',
         }}>
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
@@ -40,7 +40,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
             gap:'40px',
            alignItems: 'center',
            width:'100%',
-           height: {xs: '10vh', sm: '10vh', md: '7vh', lg: '7vh', xl: '7vh'}, 
+           height: {xs: '6vh', sm: '6vh', md: '6vh', lg: '7vh', xl: '7vh'}, 
            zIndex: 500, background: '#b3b3f4',
        }}>
                <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
