@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
         left: "50%",
          marginLeft: "-150px",
-         marginTop: "10px"
+         marginTop: "15px"
         
     },
 }));
@@ -68,7 +68,7 @@ const StyledSearchButton = styled(InputBase)(({ theme }) => ({
         // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(0)})`,
         transition: theme.transitions.create('width'),
-        width: '60px',
+        width: '50px',
         color: 'white',
         cursor:'pointer'
     },
