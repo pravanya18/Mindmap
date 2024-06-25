@@ -14,8 +14,9 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
             //  gap:'2px',
             alignItems: {md:'center'},
             width:'100%',
-            height: {xs: '22vh', sm: '22vh', md: '10vh', lg: '10vh', xl: '10vh'},
-            zIndex: 500, background: '#b3b3f4',
+            height: {xs: '24vh', sm: '24vh', md: '10vh', lg: '10vh', xl: '10vh'},
+            zIndex: 500, background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
+            //  borderRadius: "2px"
         }}>
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
                 <img src="http://thewowstyle.com/wp-content/uploads/2015/01/nature-images-6.jpg" style={{"width":"40px", "height":"40px", "marginTop": "10px", }}></img>
@@ -41,7 +42,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
            alignItems: 'center',
            width:'100%',
            height: {xs: '6vh', sm: '6vh', md: '6vh', lg: '7vh', xl: '7vh'}, 
-           zIndex: 500, background: '#b3b3f4',
+           zIndex: 500, background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
        }}>
                <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
                    Examples:
