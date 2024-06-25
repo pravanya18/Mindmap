@@ -50,7 +50,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         "border-style": "solid",
         "border-radius": "20px",
         "font-family": "Roboto, Helvetica, Arial, sans-serif",
-        // "background-color": "#f0f0f0"
+        "background-color": "#f0f0f0"
        
     },
     [theme.breakpoints.down('md')]: {
