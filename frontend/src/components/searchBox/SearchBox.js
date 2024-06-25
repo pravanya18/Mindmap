@@ -46,8 +46,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
          width: '30ch',
         color: 'black',
         
-        "border-bottom-width": 'thin',
-        "border-bottom-style": "solid",
+        "border-width": 'thin',
+        "border-style": "solid",
+        "border-radius": "20px",
+        "font-family": "Roboto, Helvetica, Arial, sans-serif",
+        "background-color": "white"
        
     },
     [theme.breakpoints.down('md')]: {

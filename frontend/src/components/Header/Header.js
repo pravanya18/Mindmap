@@ -16,11 +16,11 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
             width:'100%',
             height: {xs: '20vh', sm: '20vh', md: '10vh', lg: '10vh', xl: '10vh'},
             zIndex: 500, background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
-            //  borderRadius: "2px"
+              borderRadius: "2px"
         }}>
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
                 <img src="http://thewowstyle.com/wp-content/uploads/2015/01/nature-images-6.jpg" style={{"width":"40px", "height":"40px", "marginTop": "10px", }}></img>
-                <Typography variant='h5' color="black" sx={{alignItems: {xs:'center', md:'left'}, textAlign:{xs:'center'}, marginTop: {xs:'10px', md:'10px'}, marginLeft:"30px" }}>
+                <Typography variant='h5' color="black" sx={{alignItems: {xs:'center', md:'left'}, textAlign:{xs:'center'}, marginTop: {xs:'10px', md:'10px'}, marginLeft:"30px", fontWeight: "bold" }}>
                     MindBloom
                 </Typography>
             </Box>
