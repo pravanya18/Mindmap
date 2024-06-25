@@ -84,7 +84,7 @@ const StyledSearchButton = styled(InputBase)(({ theme }) => ({
     marginBottom: "5px",
     marginLeft: "10px",
     marginRight: "auto",
-    marginTop: "10px",
+    marginTop: "20px",
     [theme.breakpoints.down('md')]: {
          left: "50%",
          marginLeft: "-60px",
