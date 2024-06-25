@@ -34,7 +34,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
             </Box>
 
         </Box>
-         <Box sx={{
+         {/* <Box sx={{
             position: 'fixed', display: 'flex',
             top:{xs:'150px', md:'50px'},
             justifyContent: 'center',
@@ -48,10 +48,10 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
                    Examples:
                    <Divider style={{"border-color":"#1d8b69"}}/>
                </Typography>
-               {/* <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
+               <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
                 OAuth
                <Divider style={{"border-color":"#1d8b69"}}/>
-               </Typography> */}
+               </Typography>
                <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
                 React 
                <Divider style={{"border-color":"#1d8b69"}}/>
@@ -61,7 +61,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
                product marketing
                <Divider style={{"border-color":"#1d8b69"}}/>
                </Typography>
-           </Box>
+           </Box> */}
         </>
     )
 }
