@@ -14,7 +14,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
             //  gap:'2px',
             alignItems: {md:'center'},
             width:'100%',
-            height: {xs: '24vh', sm: '24vh', md: '10vh', lg: '10vh', xl: '10vh'},
+            height: {xs: '20vh', sm: '20vh', md: '10vh', lg: '10vh', xl: '10vh'},
             zIndex: 500, background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
             //  borderRadius: "2px"
         }}>
