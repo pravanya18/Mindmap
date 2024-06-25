@@ -1,27 +1,30 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography, img } from '@mui/material'
 import React from 'react'
 import SearchBox from '../searchBox/SearchBox'
 import Divider from "@mui/material/Divider";
+
 
 const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
     return (
         <>
         <Box sx={{
-             position: 'fixed', display: 'flex',
+             position: 'fixed',
+             display: {md:'flex'},
              justifyContent: 'center',
-             gap:'2px',
-            alignItems: 'center',
+            //  gap:'2px',
+            alignItems: {md:'center'},
             width:'100%',
-            height: '10vh', 
+            height: {xs: '28vh', sm: '22vh', md: '10vh', lg: '10vh', xl: '10vh'},
             zIndex: 500, background: '#b3b3f4',
         }}>
-            <Box sx={{ mx: 1 }}>
-                <Typography variant='h5' color="black" style={{ marginLeft: '16px' }}>
-                    MindMap
+            <Box sx={{display: 'flex', justifyContent: 'center'}}>
+                <img src="http://thewowstyle.com/wp-content/uploads/2015/01/nature-images-6.jpg" style={{"width":"40px", "height":"40px", "marginTop": "10px", }}></img>
+                <Typography variant='h5' color="black" sx={{alignItems: {xs:'center', md:'left'}, textAlign:{xs:'center'}, marginTop: {xs:'10px', md:'10px'}, marginLeft:"30px" }}>
+                    MindBloom
                 </Typography>
             </Box>
-            <Box sx={{ mx: 10 }}>
-                <SearchBox style={{ marginLeftt: '16px', width:'900px' }}
+            <Box sx={{ mx: {md:10} }}>
+                <SearchBox 
                     searchValue={searchValue}
                     setSearchValue={setSearchValue}
                     setLoading={setLoading}
@@ -32,28 +35,29 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
         </Box>
          <Box sx={{
             position: 'fixed', display: 'flex',
-            top:'50px',
+            top:{xs:'150px', md:'50px'},
             justifyContent: 'center',
             gap:'40px',
            alignItems: 'center',
            width:'100%',
-           height: '7vh', 
+           height: {xs: '10vh', sm: '10vh', md: '7vh', lg: '7vh', xl: '7vh'}, 
            zIndex: 500, background: '#b3b3f4',
        }}>
                <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
-                   Example Searches:
+                   Examples:
                    <Divider style={{"border-color":"#1d8b69"}}/>
                </Typography>
+               {/* <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
+                OAuth
+               <Divider style={{"border-color":"#1d8b69"}}/>
+               </Typography> */}
                <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
-               how to begin learning network security
+                React 
                <Divider style={{"border-color":"#1d8b69"}}/>
                </Typography>
+              
                <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
-               how to become a certified react developer
-               <Divider style={{"border-color":"#1d8b69"}}/>
-               </Typography>
-               <Typography variant='h7' color="black" style={{ marginLeft: '16px' }}>
-               efficient ways to product marketing
+               product marketing
                <Divider style={{"border-color":"#1d8b69"}}/>
                </Typography>
            </Box>

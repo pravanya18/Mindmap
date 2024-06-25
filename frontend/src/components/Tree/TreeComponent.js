@@ -94,15 +94,12 @@ const TreeComponent = ({ treeData }) => {
                         {nodeDatum.name.split(' ').map((word, index) => (
                           <tspan x="55px" dy={"1em"} key={index}>
                                 {word}
-                                {/* { index === nodeDatum.name.split(' ').length-1 ?  nodeDatum.articleLink ? (
-                                   <><tspan x="55px" dy={"1em"}></tspan><a href={nodeDatum.articleLink} target="_blank">  ...</a></> 
-                                ): <></> : ""} */}
                             </tspan>
                             
                             ))}
                            {
-                                nodeDatum.articleLink ? (
-                                    <tspan x="55px" dy={"1.5em"}><a href={nodeDatum.articleLink} target="_blank">Link</a></tspan>
+                                nodeDatum.link ? (
+                                    <tspan x="55px" dy={"1.5em"}><a href={nodeDatum.link} target="_blank">Link</a></tspan>
                                 ): <></>
                             }
                             
@@ -133,7 +130,7 @@ const TreeComponent = ({ treeData }) => {
 
         const handleResize = () => {
             // Check the screen width and update the orientation
-            const newOrientation = window.innerWidth < 600 ? 'vertical' : 'horizontal';
+            const newOrientation = window.innerWidth < 600 ? 'horizontal' : 'horizontal';
             setOrientation(newOrientation);
         };
 

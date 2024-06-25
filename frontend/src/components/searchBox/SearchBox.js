@@ -6,35 +6,35 @@ import axios from 'axios';
 import {Box, Typography, Button, Divider} from "@mui/material"
 
 const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
+    position:{xs: 'fixed', md:  'relative'},
     borderRadius: theme.shape.borderRadius,
     // backgroundColor: alpha(theme.palette.common.white, 0.15),
     // '&:hover': {
     //     backgroundColor: alpha(theme.palette.common.white, 0.25),
     // },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('xs')]: {
         // marginLeft: theme.spacing(1),
         width: 'auto',
     },
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white',
-    borderWidth: "2px",
-    borderColor:"red",
-    borderStyle: "solid",
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    borderRadius: "2px",
-    right:"-130px",
-    top: "0px"
-}));
+// const SearchIconWrapper = styled('div')(({ theme }) => ({
+//     padding: theme.spacing(0, 2),
+//     height: '100%',
+//     position: 'absolute',
+//     pointerEvents: 'none',
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     color: 'white',
+//     borderWidth: "2px",
+//     borderColor:"red",
+//     borderStyle: "solid",
+//     backgroundColor: alpha(theme.palette.common.white, 0.15),
+//     borderRadius: "2px",
+//     right:"-130px",
+//     top: "0px"
+// }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
@@ -43,17 +43,23 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(0)})`,
         transition: theme.transitions.create('width'),
-        width: '30px',
+         width: '30ch',
         color: 'black',
-        [theme.breakpoints.up('sm')]: {
-            width: '30ch',
-            
-        },
+        
+        "border-bottom-width": 'thin',
+        "border-bottom-style": "solid",
+       
+    },
+    [theme.breakpoints.down('md')]: {
+        left: "50%",
+         marginLeft: "-150px",
+         marginTop: "10px"
+        
     },
 }));
 
 const StyledSearchButton = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
+    color: 'red',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
@@ -61,8 +67,10 @@ const StyledSearchButton = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create('width'),
         width: '60px',
         color: 'white',
+        cursor:'pointer'
     },
-    padding: "0px",
+   
+    padding: {md: "0px"},
     height: "30px",
     borderColor: "#17664e",
     borderWidth: "2px",
@@ -71,6 +79,18 @@ const StyledSearchButton = styled(InputBase)(({ theme }) => ({
     "background-color": "#4c8087",
     "font-size": "12px",
     marginBottom: "5px",
+    marginLeft: "10px",
+    marginRight: "auto",
+    marginTop: "10px",
+    [theme.breakpoints.down('md')]: {
+         left: "50%",
+         marginLeft: "-60px",
+         top: "100px",
+         position:"fixed"
+            
+        },
+
+
 }));
 
 const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
@@ -109,10 +129,20 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
     const fetchData = async (word) => {
         setLoading(true)
         try {
-            const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
-            if (response) {
-                setTreeData(response.data)
-            }
+            console.log("word12 "+word);
+          //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
+           const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, {keyword: word})
+           .then((response) => {console.log("responseeeeeee...." + JSON.stringify(response));
+           // JSON.stringify(response.data).replaceAll("title","name").replaceAll("subtopics","children")
+           setTreeData(response.data)}).catch(x => {
+            alert("alert "+ x);
+           })
+           console.log("Done... ")
+       //     console.log(`${process.env.REACT_APP_server_url}data/${word}`);
+            // if (response) {
+            //     console.log(" response "+ JSON.stringify(response.data));
+            //     setTreeData(response.data)
+            // }
         } catch (e) {
             if (e.response?.status === 404) {
                 setTreeData(null)
@@ -141,10 +171,10 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
                 type='text'
                 value={search}
                 onChange={handleSearchClick}
-                onKeyDown={(e) => {
-                    if (e.key === 'Enter') handleSearchSubmit()
-                }}
-                onClick={handleSearchSubmit}
+                // onKeyDown={(e) => {
+                //     if (e.key === 'Enter') handleSearchSubmit()
+                // }}
+                // onClick={handleSearchSubmit}
             />
 
             <StyledSearchButton 
@@ -157,7 +187,7 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
                 if (e.key === 'Enter') handleSearchSubmit()
             }}
             />
-            <Divider style={{"border-color": "black"}} />
+            {/* <Divider style={{"border-color": "black"}} /> */}
         </Search>
     )
 }
