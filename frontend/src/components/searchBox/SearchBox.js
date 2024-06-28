@@ -3,7 +3,7 @@ import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
-import { Box, Typography, Button, Divider, Grid } from "@mui/material"
+import { Box, Typography, Button, Divider, Grid, ButtonBase } from "@mui/material"
 
 const Search = styled('div')(({ theme }) => ({
     // position: { xs: 'fixed', md: 'relative' },
@@ -39,16 +39,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-const StyledSearchButton = styled(InputBase)(({ theme }) => ({
+const StyledSearchButton = styled(ButtonBase)(({ theme }) => ({
     // color: 'red',
-    '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        paddingLeft: `calc(1em + ${theme.spacing(0)})`,
-        width: '3.5rem',
-        color: 'white',
-        cursor: 'pointer',
-        marginLeft: '0.5rem'
-    },
+    padding: theme.spacing(1, 1, 1, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(0)})`,
+    width: '5rem',
+    color: 'white',
+    cursor: 'pointer',
+    marginLeft: '0.5rem',
     // width: "6rem",
     height: "auto",
     borderColor: "#17664e",
@@ -57,8 +55,6 @@ const StyledSearchButton = styled(InputBase)(({ theme }) => ({
     borderRadius: "1rem",
     backgroundColor: "#4c8087",
     fontSize: "0.8rem",
-    cursor: 'pointer',
-    marginLeft: '1rem'
 }));
 
 const SearchBox = ({ setSearchValue, setLoading, setTreeData, setError }) => {
@@ -112,15 +108,13 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData, setError }) => {
                 }}
             />
             <StyledSearchButton
-                placeholder='Search...1'
-                inputProps={{ "aria-label": "search" }}
-                type='text'
-                value={"SEARCH"}
                 onClick={handleSearchSubmit}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') handleSearchSubmit()
                 }}
-            />
+            >
+                Search
+            </StyledSearchButton>
         </Box>
     )
 }
