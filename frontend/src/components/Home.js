@@ -4,13 +4,13 @@ import TreeComponent from './Tree/TreeComponent'
 import SearchBox from './searchBox/SearchBox'
 import Loading from './Loading'
 import NotFound from './NotFound'
+import MindMap from './MindMap/mindMap'
 
-const Home = ({ searchValue, loading, treeData }) => {
-
+const Home = ({ searchValue, loading, treeData, error }) => {
 
     return (
         <>
-            {searchValue ? !loading ? !treeData ? <NotFound /> : <TreeComponent treeData={treeData} /> : <Loading /> : <></>}
+            {error ? <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>{error}</Box> : searchValue ? !loading ? !treeData ? <NotFound /> : <TreeComponent data={treeData} /> : <Loading /> : <></>}
         </>
     )
 }

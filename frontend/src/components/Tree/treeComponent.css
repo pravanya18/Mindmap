@@ -1,19 +1,19 @@
 .node__root>g>rect {
     /* fill: #3a5d95;  */
-    fill: #4c8087;
+    fill: #505555;
     box-shadow: 10px 10px;
 
 }
 
 .node__branch>g>rect {
-    fill:  #BC5897;
+    fill: #92878e;
     box-shadow: 10px 10px;
 }
 
 .node__leaf>g>rect {
-    fill: #6a87ca;
+    fill: #a1b2da;
     box-shadow: 30px 30px;
-     /* stroke: black;
+    /* stroke: black;
     stroke-width: 2; */
 }
 
@@ -28,7 +28,7 @@
     letter-spacing: 1px
 }
 
-feDropShadow{
+feDropShadow {
     background-color: black;
     color: red;
     flood-color: black;
@@ -41,7 +41,7 @@ feDropShadow{
     stroke-width: 1;
 }
 
-.text-class{
+.text-class {
     stroke: #000;
     stroke-width: 1;
 }

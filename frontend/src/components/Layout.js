@@ -4,16 +4,17 @@ import SearchBox from './searchBox/SearchBox'
 import TreeComponent from './Tree/TreeComponent'
 import Header from './Header/Header'
 
-const Layout = ({ children, searchValue, setSearchValue, setLoading, setTreeData }) => {
+const Layout = ({ children, searchValue, setSearchValue, setLoading, setTreeData, setError }) => {
     return (
-        <>
+        <Box sx={{ minWidth: '380px' }}>
             <Header
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
                 setLoading={setLoading}
-                setTreeData={setTreeData} />
+                setTreeData={setTreeData}
+                setError={setError} />
             {children}
-        </>
+        </Box>
     )
 }
 

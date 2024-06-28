@@ -1,13 +1,49 @@
-import { Box, Button, Typography, img } from '@mui/material'
+import { Box, Button, Typography, img, AppBar, Toolbar, IconButton, Grid } from '@mui/material'
 import React from 'react'
 import SearchBox from '../searchBox/SearchBox'
 import Divider from "@mui/material/Divider";
+import ExampleSection from '../ExampleSection';
 
 
-const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
+const Header = ({ searchValue, setSearchValue, setLoading, setTreeData, setError }) => {
     return (
         <>
-        <Box sx={{
+            <Box sx={{ flexGrow: 1, }}>
+                <AppBar position="static" sx={{ bgcolor: 'rgb(102, 110, 116)' }}>
+                    <Toolbar>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+                            <Typography variant="h6" component="div" sx={{}}>
+                                MindBloom
+                            </Typography>
+                        </Box>
+                    </Toolbar>
+                </AppBar>
+            </Box>
+            <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '95%',
+                m: 'auto',
+                py: 3,
+                mt: { xs: 2, sm: 3 },
+                background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
+                borderRadius: "1rem"
+            }}>
+                <Typography variant="h5" component="div" sx={{ fontWeight: 500, mb: 3 }}>AI-Powered Mind Mapping</Typography>
+                <Box sx={{}}>
+                    <SearchBox
+                        searchValue={searchValue}
+                        setSearchValue={setSearchValue}
+                        setLoading={setLoading}
+                        setTreeData={setTreeData}
+                        setError={setError}
+                    />
+                </Box>
+            </Box>
+            <ExampleSection />
+            {/* <Box sx={{
              position: 'fixed',
              display: {md:'flex'},
              justifyContent: 'center',
@@ -33,8 +69,8 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData }) => {
                 />
             </Box>
 
-        </Box>
-         {/* <Box sx={{
+        </Box> */}
+            {/* <Box sx={{
             position: 'fixed', display: 'flex',
             top:{xs:'150px', md:'50px'},
             justifyContent: 'center',

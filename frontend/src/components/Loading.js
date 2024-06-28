@@ -3,7 +3,7 @@ import React from 'react'
 
 const Loading = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
             <CircularProgress /> Loading....
         </Box>
     )

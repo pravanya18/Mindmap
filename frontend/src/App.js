@@ -4,12 +4,15 @@ import './App.css';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import { useState } from 'react';
+import MindMap from './components/MindMap/mindMap';
+import fakeData from './treeData.json'
 
 function App() {
 
   const [searchValue, setSearchValue] = useState(null)
   const [treeData, setTreeData] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   return (
     <BrowserRouter>
@@ -18,6 +21,7 @@ function App() {
         setTreeData={setTreeData}
         setLoading={setLoading}
         searchValue={searchValue}
+        setError={setError}
       >
         <Routes>
           <Route path='/'>
@@ -26,12 +30,14 @@ function App() {
               treeData={treeData}
               loading={loading}
               searchValue={searchValue}
+              error={error}
             />} />
             <Route path=':word' element={<Home
               treeData={treeData}
               loading={loading}
               searchValue={searchValue}
             />} />
+            <Route path='mindmap' element={<MindMap data={fakeData} />} />
           </Route>
         </Routes>
       </Layout>

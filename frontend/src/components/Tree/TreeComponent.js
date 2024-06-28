@@ -10,7 +10,7 @@ import data from '../../treeData.json'
 
 
 
-const TreeComponent = ({ treeData }) => {
+const TreeComponent = ({ data }) => {
     // console.log(data)
 
     const [orientation, setOrientation] = useState('horizontal');
@@ -70,56 +70,37 @@ const TreeComponent = ({ treeData }) => {
     };
     const renderRectSvgNode = (customProps, onNodeClick) => {
         const { nodeDatum, toggleNode } = customProps;
-        var rectWidth = (nodeDatum.name.split(' ').map(a=>a.length).length==0 ? nodeDatum.name.length : Math.max(...(nodeDatum.name.split(' ').map(a=>a.length))))*2 + 110;
-        var rectHeight = nodeDatum.name.split(' ').length*10 + 50; 
-        console.log("node "+nodeDatum.name);
-         console.log(" reatWidth " + Math.max(...(nodeDatum.name.split(' ').map(a=>a.length)))+ "  gg "+rectWidth);      
-         console.log( 11+"1")
-         console.log(nodeDatum.name.split(' ').map(a=>a.length).length==0 ? nodeDatum.name.length : Math.max(...(nodeDatum.name.split(' ').map(a=>a.length))) +100 );
-         console.log(" len 12345");
-         return (
+        var rectWidth = (nodeDatum.name.split(' ').map(a => a.length).length == 0 ? nodeDatum.name.length : Math.max(...(nodeDatum.name.split(' ').map(a => a.length)))) * 2 + 110;
+        var rectHeight = nodeDatum.name.split(' ').length * 10 + 50;
+        console.log("node " + nodeDatum.name);
+        console.log(" reatWidth " + Math.max(...(nodeDatum.name.split(' ').map(a => a.length))) + "  gg " + rectWidth);
+        console.log(11 + "1")
+        console.log(nodeDatum.name.split(' ').map(a => a.length).length == 0 ? nodeDatum.name.length : Math.max(...(nodeDatum.name.split(' ').map(a => a.length))) + 100);
+        console.log(" len 12345");
+        return (
             <>
                 <g className="rd3t-label">
-       
-                    {/* <rect width={30} height={30} x={-18} onClick={() => { onNodeClick(nodeDatum); toggleNode() }} /> */}
                     <filter id="drop-shadow">
-          <feDropShadow dx="2" dy="2" stdDeviation="0" />
-        </filter>
-                    <rect width={rectWidth} height={rectHeight} x={-18} y={-rectHeight/2} filter="url(#drop-shadow)" onClick={() => { onNodeClick(nodeDatum); toggleNode() }}/>
-                   
-                    <text className="text-class"  
-                        x="0em" y={-(rectHeight/2) +13 + "px"} textAnchor="middle" alignmentBaseline="middle"
-                    // onClick={onNodeClick}
+                        <feDropShadow dx="2" dy="2" stdDeviation="0" />
+                    </filter>
+                    {/* <rect width={rectWidth} height={rectHeight} x={-18} y={-rectHeight / 2} filter="url(#drop-shadow)" onClick={() => { onNodeClick(nodeDatum); toggleNode() }} /> */}
+                    <rect width={rectWidth} height={rectHeight} x={-10} y={-rectHeight / 2} onClick={() => { onNodeClick(nodeDatum); toggleNode() }} />
+
+                    <text className="text-class"
+                        x="0em" y={-(rectHeight / 2) + 13 + "px"} textAnchor="middle" alignmentBaseline="middle"
                     >
                         {nodeDatum.name.split(' ').map((word, index) => (
-                          <tspan x="55px" dy={"1em"} key={index}>
+                            <tspan x="55px" dy={"1em"} key={index}>
                                 {word}
                             </tspan>
-                            
-                            ))}
-                           {
-                                nodeDatum.link ? (
-                                    <tspan x="55px" dy={"1.5em"}><a href={nodeDatum.link} target="_blank">Link</a></tspan>
-                                ): <></>
-                            }
-                            
-                           
-                        {/* {nodeDatum.attributes &&
-                            Object.entries(nodeDatum.attributes).map(([labelKey, labelValue], i) => (
-                                <tspan key={`${labelKey}-${i}`}>
-                                    {labelKey}: {labelValue}
-                                </tspan>
-                            ))} */}
-                    
+
+                        ))}
+                        {
+                            nodeDatum.link ? (
+                                <tspan x="55px" dy={"1.5em"}><a href={nodeDatum.link} target="_blank">Link</a></tspan>
+                            ) : <></>
+                        }
                     </text>
-
-                    
-
-
-                    {/* <ellipse cx="0" cy="0" rx={nodeDatum.name.length*10} ry="30" fill="blue" />
-      <text x="50%" y="50%" textAnchor="middle" >
-        {nodeDatum.name}
-      </text> */}
                 </g>
             </>
         );
@@ -152,10 +133,10 @@ const TreeComponent = ({ treeData }) => {
 
 
     return (
-        <> <Stack direction="row" spacing="md" sx={{}}>
-            <Box sx={{ width: '100%', height: '90vh' }}>
+        <>
+            <Box sx={{ width: '100%', height: '70vh' }}>
                 <Tree
-                    data={treeData}
+                    data={data}
                     orientation={orientation}
                     dimensions={{
                         height: window.innerHeight,
@@ -187,7 +168,6 @@ const TreeComponent = ({ treeData }) => {
                     leafNodeClassName="node__leaf"
                 />
             </Box>
-        </Stack>
         </>
     );
 }
