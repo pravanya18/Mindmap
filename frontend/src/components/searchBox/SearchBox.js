@@ -22,17 +22,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
         // padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(0)})`,
-        // transition: theme.transitions.create('width'),
-        // width: '100%',
         flexGrow: 1,
         color: 'black',
-        "border-width": 'thin',
-        "border-style": "solid",
-        "border-radius": "1rem",
-        "font-family": "Roboto, Helvetica, Arial, sans-serif",
-        "background-color": "#f0f0f0",
+        borderWidth: 'thin',
+        borderStyle: 'solid',
+        borderRadius: '1rem',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        backgroundColor: '#f0f0f0',
         [theme.breakpoints.up('md')]: {
             width: '20rem',
         }

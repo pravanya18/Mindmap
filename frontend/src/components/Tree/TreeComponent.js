@@ -13,6 +13,8 @@ const TreeComponent = ({ data }) => {
         // Handle node click logic here if needed
     };
 
+    console.log("inside treecomponent")
+
     const renderRectSvgNode = (customProps, onNodeClick) => {
         const { nodeDatum, toggleNode } = customProps;
         const rectWidth = (Math.max(...nodeDatum.name.split(' ').map(word => word.length)) * 2 + 110);
@@ -70,7 +72,7 @@ const TreeComponent = ({ data }) => {
     }, []);
 
     return (
-        <Box ref={wrapperRef} sx={{ width: '95%', m: "auto", height: { xs: '80vh' }, bgcolor: '#2a2a35' }}>
+        <Box ref={wrapperRef} sx={{ width: '95%', m: "auto", height: { xs: '80vh' } }}>
             {dimensions.width > 0 && dimensions.height > 0 && (
                 <Tree
                     data={data}
