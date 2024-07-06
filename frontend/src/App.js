@@ -7,7 +7,7 @@ import { useState } from 'react';
 import MindMap from './components/MindMap/MindMap';
 import fakeData from './treeData.json'
 import TreeComponent from './components/Tree/TreeComponent';
-import ReactflowMindMap from './components/MindMap/ReactflowMindmap';
+import ReactflowMindMap from './components/MindMap/ReactFlow/ReactflowMindmap';
 
 function App() {
 
