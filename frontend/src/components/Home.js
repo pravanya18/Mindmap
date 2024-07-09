@@ -4,7 +4,7 @@ import TreeComponent from './Tree/TreeComponent'
 import SearchBox from './searchBox/SearchBox'
 import Loading from './Loading'
 import NotFound from './NotFound'
-import MindMap from './MindMap/MindMap'
+import MindMap from './MindMap/mindMap'
 
 const Home = ({ searchValue, loading, treeData, error }) => {
 
