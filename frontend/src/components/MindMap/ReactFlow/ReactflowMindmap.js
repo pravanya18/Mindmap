@@ -132,6 +132,7 @@ const LayoutFlow = () => {
             proOptions={{ hideAttribution: true }}
             nodeTypes={nodeTypes}
             fitView
+            style={{backgroundColor: "#FAF9F6"}}
         >
             <Panel position="top-left">MindBloom</Panel>
             <Controls security='restricted' showInteractive={false} showZoom={false} />
@@ -153,6 +154,7 @@ const ReactflowMindMap = () => {
                 height: '70vh',
                 m: 'auto',
                 border: '1px solid #ccc',
+                marginTop: '10px'
             }}
         >
             <ReactFlowProvider>

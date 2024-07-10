@@ -3,16 +3,17 @@ import React from 'react'
 import SearchBox from '../searchBox/SearchBox'
 import Divider from "@mui/material/Divider";
 import ExampleSection from '../ExampleSection';
+import RecommendationCarousel from './RecommendationCarousel';
 
 
 const Header = ({ searchValue, setSearchValue, setLoading, setTreeData, setError }) => {
     return (
-        <>
+        <Box  sx={{background: 'linear-gradient(to bottom, rgb(0 182 127 / 15%), #fff);'}}>
             <Box sx={{ flexGrow: 1, }}>
-                <AppBar position="static" sx={{ bgcolor: 'rgb(102, 110, 116)' }}>
+                <AppBar position="static" sx={{background: 'linear-gradient(45deg, rgb(153 228 206 / 41%), rgb(81 97 255 / 26%))'}}>
                     <Toolbar>
                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-                            <Typography variant="h6" component="div" sx={{}}>
+                            <Typography variant="h6" component="div" sx={{color: "black"}}>
                                 MindBloom
                             </Typography>
                         </Box>
@@ -28,10 +29,14 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData, setError
                 m: 'auto',
                 py: 3,
                 mt: { xs: 2, sm: 3 },
-                background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
+                // background: 'linear-gradient(to bottom right, #b3b3f4, #e0ccff);',
+                background:"url('https://www.edrawmind.com/app/assets/header-bg.d6ffa0fb.png') no-repeat",
+                "background-size": 'cover',
                 borderRadius: "1rem"
             }}>
-                <Typography variant="h5" component="div" sx={{ fontWeight: 500, mb: 3 }}>AI-Powered Mind Mapping</Typography>
+                <Typography variant="h5" component="div" sx={{ fontWeight: 500, mb: 3 }}>
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnnxm32A0vepIZ60r9opF-csgSh3tdtH-QMOnufwS7i4zuk8bs" alt="HTML Tutorial" style={{"width":"40px", "height":"40px", "marginTop": "10px", "marginBottom": "-15px", "marginRight": "10px"}}></img>
+                    AI-Powered Mind Mapping</Typography>
                 <Box sx={{}}>
                     <SearchBox
                         searchValue={searchValue}
@@ -40,9 +45,12 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData, setError
                         setTreeData={setTreeData}
                         setError={setError}
                     />
+                    
                 </Box>
+                <RecommendationCarousel/>
             </Box>
-            <ExampleSection />
+            
+            {/* <ExampleSection /> */}
             {/* <Box sx={{
              position: 'fixed',
              display: {md:'flex'},
@@ -98,7 +106,7 @@ const Header = ({ searchValue, setSearchValue, setLoading, setTreeData, setError
                <Divider style={{"border-color":"#1d8b69"}}/>
                </Typography>
            </Box> */}
-        </>
+        </Box>
     )
 }
 
