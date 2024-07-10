@@ -4,7 +4,7 @@ import './App.css';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import { useState } from 'react';
-import MindMap from './components/MindMap/mindMap';
+import MindMap from './components/MindMap/MindMap1';
 import fakeData from './treeData.json'
 import TreeComponent from './components/Tree/TreeComponent';
 import ReactflowMindMap from './components/MindMap/ReactFlow/ReactflowMindmap';
