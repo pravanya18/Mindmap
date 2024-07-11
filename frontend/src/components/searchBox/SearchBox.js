@@ -3,153 +3,80 @@ import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
-import {Box, Typography, Button, Divider} from "@mui/material"
+import { Box, Typography, Button, Divider, Grid, ButtonBase } from "@mui/material"
+import { formGraphStructure } from '../../util';
 
 const Search = styled('div')(({ theme }) => ({
-    position:{xs: 'fixed', md:  'relative'},
+    // position: { xs: 'fixed', md: 'relative' },
     borderRadius: theme.shape.borderRadius,
     // backgroundColor: alpha(theme.palette.common.white, 0.15),
     // '&:hover': {
     //     backgroundColor: alpha(theme.palette.common.white, 0.25),
     // },
     [theme.breakpoints.up('xs')]: {
-        // marginLeft: theme.spacing(1),
+        marginLeft: theme.spacing(1),
         width: 'auto',
     },
 }));
 
-// const SearchIconWrapper = styled('div')(({ theme }) => ({
-//     padding: theme.spacing(0, 2),
-//     height: '100%',
-//     position: 'absolute',
-//     pointerEvents: 'none',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     color: 'white',
-//     borderWidth: "2px",
-//     borderColor:"red",
-//     borderStyle: "solid",
-//     backgroundColor: alpha(theme.palette.common.white, 0.15),
-//     borderRadius: "2px",
-//     right:"-130px",
-//     top: "0px"
-// }));
-
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
+        // padding: theme.spacing(1, 1, 1, 0),
         paddingLeft: `calc(1em + ${theme.spacing(0)})`,
-        transition: theme.transitions.create('width'),
-         width: '30ch',
+        flexGrow: 1,
         color: 'black',
-        
-        "border-width": 'thin',
-        "border-style": "solid",
-        "border-radius": "20px",
-        "font-family": "Roboto, Helvetica, Arial, sans-serif",
-        "background-color": "#f0f0f0"
-       
-    },
-    [theme.breakpoints.down('md')]: {
-        left: "50%",
-         marginLeft: "-150px",
-         marginTop: "15px"
-        
+        borderWidth: 'thin',
+        borderStyle: 'solid',
+        borderRadius: '1rem',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        backgroundColor: '#f0f0f0',
+        [theme.breakpoints.up('md')]: {
+            width: '20rem',
+        }
     },
 }));
 
-const StyledSearchButton = styled(InputBase)(({ theme }) => ({
-    color: 'red',
-    '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(0)})`,
-        transition: theme.transitions.create('width'),
-        width: '50px',
-        color: 'white',
-        cursor:'pointer'
-    },
-   
-    padding: {md: "0px"},
-    height: "30px",
+const StyledSearchButton = styled(ButtonBase)(({ theme }) => ({
+    // color: 'red',
+    padding: theme.spacing(1, 1, 1, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(0)})`,
+    width: '5rem',
+    color: 'white',
+    cursor: 'pointer',
+    marginLeft: '0.5rem',
+    // width: "6rem",
+    height: "auto",
     borderColor: "#17664e",
     borderWidth: "2px",
     borderStyle: "solid",
-    borderRadius: "40px",
-    "background-color": "#4c8087",
-    "font-size": "12px",
-    marginBottom: "5px",
-    marginLeft: "10px",
-    marginRight: "auto",
-    marginTop: "20px",
-    cursor:'pointer',
-    [theme.breakpoints.down('md')]: {
-         left: "50%",
-         marginLeft: "-60px",
-         top: "100px",
-         position:"fixed"
-            
-        },
-
-
+    borderRadius: "1rem",
+    backgroundColor: "#4c8087",
+    fontSize: "0.8rem",
 }));
 
-const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
-
-    // const [search, setSearch] = useState("")
-
-    // const fetchData = async (word) => {
-    //     setLoading(true)
-    //     try {
-    //         console.log("word12 "+word);
-    //       //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
-    //        const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, {keyword: word})
-    //        .then((response) => {console.log("responseeeeeee...." + JSON.stringify(response));
-    //        // JSON.stringify(response.data).replaceAll("title","name").replaceAll("subtopics","children")
-    //        setTreeData(response)}).catch(x => {
-    //         alert("alert "+ x);
-    //        })
-    //        console.log("Done... ")
-    //    //     console.log(`${process.env.REACT_APP_server_url}data/${word}`);
-    //         // if (response) {
-    //         //     console.log(" response "+ JSON.stringify(response.data));
-    //         //     setTreeData(response.data)
-    //         // }
-    //     } catch (e) {
-    //         if (e.response?.status === 404) {
-    //             setTreeData(null)
-    //         }
-
-    //         console.log(e)
-    //     }
-    //     setLoading(false)
-    // }
+const SearchBox = ({ setSearchValue, setLoading, setTreeData, setError, setNodes, setEdges }) => {
 
     const [search, setSearch] = useState("")
 
     const fetchData = async (word) => {
         setLoading(true)
         try {
-            console.log("word12 "+word);
-          //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
-           const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, {keyword: word})
-           .then((response) => {console.log("responseeeeeee...." + JSON.stringify(response));
-           // JSON.stringify(response.data).replaceAll("title","name").replaceAll("subtopics","children")
-           setTreeData(response.data)}).catch(x => {
-            alert("alert "+ x);
-           })
-           console.log("Done... ")
-       //     console.log(`${process.env.REACT_APP_server_url}data/${word}`);
-            // if (response) {
-            //     console.log(" response "+ JSON.stringify(response.data));
-            //     setTreeData(response.data)
-            // }
+            setNodes([])
+            setEdges([])
+            //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
+            const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, { keyword: word })
+            console.log(response);
+            const resp = await formGraphStructure(response.data)
+            setEdges(resp.initialEdges)
+            setNodes(resp.initialNodes)
+            setTreeData({ initialNodes: resp.initialNodes, initialEdges: resp.initialEdges })
+            console.log("Done... ")
         } catch (e) {
-            if (e.response?.status === 404) {
-                setTreeData(null)
+            console.log(e.response)
+            setTreeData(null)
+            if (e.response) {
+                setError(e.response.data.message)
             }
 
             console.log(e)
@@ -159,18 +86,23 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
 
     const handleSearchClick = (e) => {
         setSearch(e.target.value)
+        setError(null)
     }
 
     const handleSearchSubmit = async (e) => {
+        if (search === "") {
+            setError("Enter a topic to generate mindmap");
+            return;
+        }
         setSearchValue(search)
         console.log(search)
         fetchData(search.toLowerCase());
     }
 
     return (
-        <Search>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
             <StyledInputBase
-                placeholder="enter a topic to generate a mindmap "
+                placeholder="Enter a topic to generate a mindmap "
                 inputProps={{ 'aria-label': 'search' }}
                 type='text'
                 value={search}
@@ -178,21 +110,16 @@ const SearchBox = ({ setSearchValue, setLoading, setTreeData }) => {
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') handleSearchSubmit()
                 }}
-                // onClick={handleSearchSubmit}
             />
-
-            <StyledSearchButton 
-            placeholder='Search...1'
-            inputProps={{"aria-label": "search"}}
-            type='text'
-            value={"SEARCH"}
-            onClick={handleSearchSubmit}
-            onKeyDown={(e) => {
-                if (e.key === 'Enter') handleSearchSubmit()
-            }}
-            />
-            {/* <Divider style={{"border-color": "black"}} /> */}
-        </Search>
+            <StyledSearchButton
+                onClick={handleSearchSubmit}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') handleSearchSubmit()
+                }}
+            >
+                Search
+            </StyledSearchButton>
+        </Box>
     )
 }
 
