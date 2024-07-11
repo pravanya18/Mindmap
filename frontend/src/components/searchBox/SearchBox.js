@@ -4,6 +4,7 @@ import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 import { Box, Typography, Button, Divider, Grid, ButtonBase } from "@mui/material"
+import { formGraphStructure } from '../../util';
 
 const Search = styled('div')(({ theme }) => ({
     // position: { xs: 'fixed', md: 'relative' },
@@ -54,22 +55,28 @@ const StyledSearchButton = styled(ButtonBase)(({ theme }) => ({
     fontSize: "0.8rem",
 }));
 
-const SearchBox = ({ setSearchValue, setLoading, setTreeData, setError }) => {
+const SearchBox = ({ setSearchValue, setLoading, setTreeData, setError, setNodes, setEdges }) => {
 
     const [search, setSearch] = useState("")
 
     const fetchData = async (word) => {
         setLoading(true)
         try {
-            console.log("word12 " + word);
+            setNodes([])
+            setEdges([])
             //  const response = await axios.get(`${process.env.REACT_APP_server_url}data/${word}`)
             const response = await axios.post(`https://us-central1-neethu-ml.cloudfunctions.net/mind-map-2`, { keyword: word })
             console.log(response);
-            setTreeData(response.data)
+            const resp = await formGraphStructure(response.data)
+            setEdges(resp.initialEdges)
+            setNodes(resp.initialNodes)
+            setTreeData({ initialNodes: resp.initialNodes, initialEdges: resp.initialEdges })
             console.log("Done... ")
         } catch (e) {
-            if (e.response?.status === 404) {
-                setTreeData(null)
+            console.log(e.response)
+            setTreeData(null)
+            if (e.response) {
+                setError(e.response.data.message)
             }
 
             console.log(e)

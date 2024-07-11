@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Box } from '@mui/material';
 import ReactFlow, {
     Controls,
@@ -14,9 +14,10 @@ import dagre from 'dagre';
 
 import 'reactflow/dist/style.css';
 import CustomNode from './CustomNode';
-// const nodeTypes = { customNode: CustomNode };
 
-const initialNodes = [
+
+
+const initialNodes2 = [
     { id: '1', type: 'customNode', data: { label: 'Main Topic', link: 'https://example.com/main', definition: 'Main topic definition' }, position: { x: 0, y: 0 } },
     { id: '2', type: 'customNode', data: { label: 'Sub Topic 1', link: 'https://example.com/sub1', definition: 'Sub topic 1 definition' }, position: { x: 0, y: 0 } },
     { id: '3', type: 'customNode', data: { label: 'Sub Topic 2', link: 'https://example.com/sub2', definition: 'Sub topic 2 definition' }, position: { x: 0, y: 0 } },
@@ -32,7 +33,7 @@ const initialNodes = [
 
 
 
-const initialEdges = [
+const initialEdges2 = [
     { id: 'e1-2', source: '1', target: '2' },
     { id: 'e1-3', source: '1', target: '3' },
     { id: 'e2-4', source: '2', target: '4' },
@@ -49,7 +50,7 @@ const initialEdges = [
 const nodeWidth = 172;
 const nodeHeight = 36;
 
-const getLayoutedElements = (nodes, edges, direction = 'TB') => {
+const getLayoutedElements = (nodes, edges, direction = 'LR') => {
     const dagreGraph = new dagre.graphlib.Graph();
     dagreGraph.setDefaultEdgeLabel(() => ({}));
 
@@ -84,10 +85,10 @@ const getLayoutedElements = (nodes, edges, direction = 'TB') => {
     return { nodes: layoutedNodes, edges };
 };
 
-const LayoutFlow = () => {
-
-    const [nodes, setNodes] = useNodesState(initialNodes);
-    const [edges, setEdges] = useEdgesState(initialEdges);
+const LayoutFlow = ({ setNodes, setEdges, edges, nodes }) => {
+    console.log({ nodes, edges })
+    // const [nodes, setNodes] = useNodesState(initialNodes);
+    // const [edges, setEdges] = useEdgesState(initialEdges);
 
     const isLeafNode = (nodeId) => {
         return edges.filter(edge => edge.source === nodeId).length === 0;
@@ -104,23 +105,20 @@ const LayoutFlow = () => {
         }),
         [],
     );
-
-
     useEffect(() => {
         const handleResize = () => {
             console.log("Resizing...")
             const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-                initialNodes,
-                initialEdges
+                nodes,
+                edges
             );
             setNodes(layoutedNodes);
             setEdges(layoutedEdges);
         }
-
-        // window.addEventListener('resize', handleResize);
-        handleResize();
-        // return () => window.removeEventListener('resize', handleResize);
-
+        if (nodes.length > 0 && edges.length > 0) {
+            handleResize();
+        }
+        // handleResize();
     }, [setNodes, setEdges]);
 
 
@@ -132,7 +130,7 @@ const LayoutFlow = () => {
             proOptions={{ hideAttribution: true }}
             nodeTypes={nodeTypes}
             fitView
-            style={{backgroundColor: "#FAF9F6"}}
+            style={{ backgroundColor: "#FAF9F6" }}
         >
             <Panel position="top-left">MindBloom</Panel>
             <Controls security='restricted' showInteractive={false} showZoom={false} />
@@ -142,7 +140,7 @@ const LayoutFlow = () => {
 
 
 
-const ReactflowMindMap = () => {
+const ReactflowMindMap = ({ setNodes, setEdges, edges, nodes }) => {
 
     return (
         <Box
@@ -158,7 +156,7 @@ const ReactflowMindMap = () => {
             }}
         >
             <ReactFlowProvider>
-                <LayoutFlow />
+                <LayoutFlow setNodes={setNodes} setEdges={setEdges} edges={edges} nodes={nodes} />
             </ReactFlowProvider>
         </Box>
     );

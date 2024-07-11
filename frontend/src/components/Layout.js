@@ -5,8 +5,9 @@ import TreeComponent from './Tree/TreeComponent'
 import Header from './Header/Header'
 import NotFound from './NotFound'
 import Loading from './Loading'
+import Home from './Home'
 
-const Layout = ({ children, searchValue, setSearchValue, setLoading, setTreeData, setError, treeData, loading, error }) => {
+const Layout = ({ children, searchValue, setSearchValue, setLoading, setTreeData, setError, setNodes, setEdges }) => {
     return (
         <Box sx={{ minWidth: '380px' }}>
             <Header
@@ -14,8 +15,12 @@ const Layout = ({ children, searchValue, setSearchValue, setLoading, setTreeData
                 setSearchValue={setSearchValue}
                 setLoading={setLoading}
                 setTreeData={setTreeData}
-                setError={setError} />
-            {error ? <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>{error}</Box> : searchValue ? !loading ? !treeData ? <NotFound /> : children : <Loading /> : <></>}
+                setError={setError}
+                setEdges={setEdges}
+                setNodes={setNodes}
+            />
+
+            {children}
         </Box>
     )
 }
